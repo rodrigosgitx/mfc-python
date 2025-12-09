@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+
+<sistema>
+	
+	<!-- ejemplo Aberle-->
+	
+	<plc 	name='PLC1' 
+			protocolo = 'aberle' 
+			sender = 'TSC2' 
+			receiver = 'MFCS'>
+			
+		<port 	name ='in' 
+				port ='5001' 
+				kal = '0' 
+				kal.time = '15'
+				/>
+				
+		<port 	name ='out' 
+				port ='5000' 
+				kal = '1' 
+				kal.time = '15'
+				/>
+	</plc>
+	<!-- ejemplo Durkopp-->
+	
+	<plc 	name='PLC001' 
+			protocolo = 'durkopp' 
+			sender = 'HIS' 
+			receiver = 'WCS'>
+			
+		<port 	name ='high' 
+				port ='3501' 
+				kal = '1' 
+				kal.time = '15'
+				/>
+				
+		<port 	name ='low' 
+				port ='3502' 
+				kal = '1' 
+				kal.time = '15'
+				/>
+	</plc>
+
+</sistema>

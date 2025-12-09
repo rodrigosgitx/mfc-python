@@ -1,0 +1,386 @@
+<?xml version='1.0'?>
+
+<protocol>
+    <messageTypeDecoder class="com.inditex.wms.commoncom.impl.FieldMessageTypeDecoder" field="type"/>
+    <type name="StringInfo" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.String" character="*" left="false" remove="true"/>
+    <type name="String" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.String" character=" " left="false" remove="true"/>
+    <type name="Integer" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.Integer" character="0" left="true" remove="true"/>
+    <type name="Timestamp" class="com.inditex.wms.commoncom.dft.TimestampTypeMetaInfo"/>
+    <type name="MessageContent" class="com.inditex.wms.commoncom.dft.MessageContentTypeMetaInfo"/>
+    <type name="StepData" class="com.inditex.wms.commoncom.dft.BeanTypeMetaInfo" type="com.inditex.wms.commoncom.dft.StepData" separator="*" properties="readItems:4,noReadItems:4,noDataItems:4,runId:5,debitSorted:4,currentlySorted:4"/>
+    <type name="AllocationInfo" class="com.inditex.wms.commoncom.dft.BeanTypeMetaInfo" type="com.inditex.wms.commoncom.dft.AllocationInfo" separator="*" properties="runId:5,debitSorted:4,currentlySorted:4"/>
+
+    <header>
+        <field name="type" label="+TI" type="String" length="6" required="true" description="Tipo de mensaje"/> 
+        <field name="timestamp" label="+TS" type="Timestamp" length="16" required="true" description="Hora de creación"/>
+        <field name="transmitter" label="+TX" type="String" length="3" required="true" description="Quién envía el mensaje"/>
+        <field name="receiver" label="+RX" type="String" length="3" required="true" description="Quién recibe el mensaje"/>
+        <field name="version" label="+VE" type="Integer" length="2" default="10" required="true" description="Version del protocolo"/>
+        <field name="id" label="+TC" type="Integer" length="8" required="true" description="Telegram counter"/>
+        <field name="length" label="+TL" type="Integer" length="4" required="true" description="Tamaño"/>
+        <field name="blockQuantity" label="+BQ" type="Integer" length="4" required="true" description="Cantidad de bloques"/>
+        <field name="blockLength" label="+BL" type="Integer" length="4" required="true" description="Tamaño de cada bloque"/>
+    </header>
+
+    <!--    KEEP ALIVE  -->
+    <message type="BCM_AL" byBlocks="false" minBodies="1" maxBodies="1">
+        <field name="interval" label="+IV" type="Integer" length="3" description="Time to send next kal"/>
+        <field name="status" label="+PS" type="Integer" length="1" options="0|1" description="1: Program active, 0: Program switched off"/>
+    </message>
+
+    <!--   ACK  -->
+    <message type="BCM_AC" byBlocks="false" minBodies="1" maxBodies="1">
+        <field name="status" label="+SC" type="Integer" length="4" description="Status code"/>
+        <field name="type" label="+TI" type="String" length="6" required="true" description="Tipo de mensaje"/> 
+        <field name="timestamp" label="+TS" type="Timestamp" length="16" required="true" description="Hora de creación"/>
+        <field name="transmitter" label="+TX" type="String" length="3" required="true" description="Quién envía el mensaje"/>
+        <field name="receiver" label="+RX" type="String" length="3" required="true" description="Quién recibe el mensaje"/>
+        <field name="version" label="+VE" type="Integer" length="2" default="10" required="true" description="Version del protocolo"/>
+        <field name="id" label="+TC" type="Integer" length="8" required="true" description="Telegram counter"/>
+        <field name="length" label="+TL" type="Integer" length="4" required="true" description="Tamaño"/>
+        <field name="blockQuantity" label="+BQ" type="Integer" length="4" required="true" description="Cantidad de bloques"/>
+        <field name="blockLength" label="+BL" type="Integer" length="4" required="true" description="Tamaño de cada bloque"/>
+        <field name="content" type="MessageContent" required="false" description="Tamaño de cada bloque"/>
+    </message>
+    
+    <!--   ACK  -->
+    <message type="BCS_AC" byBlocks="false" minBodies="1" maxBodies="1">
+        <field name="status" label="+SC" type="Integer" length="4" description="Status code"/>
+        <field name="type" label="+TI" type="String" length="6" required="true" description="Tipo de mensaje"/> 
+        <field name="timestamp" label="+TS" type="Timestamp" length="16" required="true" description="Hora de creación"/>
+        <field name="transmitter" label="+TX" type="String" length="3" required="true" description="Quién envía el mensaje"/>
+        <field name="receiver" label="+RX" type="String" length="3" required="true" description="Quién recibe el mensaje"/>
+        <field name="version" label="+VE" type="Integer" length="2" default="10" required="true" description="Version del protocolo"/>
+        <field name="id" label="+TC" type="Integer" length="8" required="true" description="Telegram counter"/>
+        <field name="length" label="+TL" type="Integer" length="4" required="true" description="Tamaño"/>
+        <field name="blockQuantity" label="+BQ" type="Integer" length="4" required="true" description="Cantidad de bloques"/>
+        <field name="blockLength" label="+BL" type="Integer" length="4" required="true" description="Tamaño de cada bloque"/>
+        <field name="content" type="MessageContent" required="false" description="Tamaño de cada bloque"/>
+    </message>
+    
+    <!--   TIME SYNCHRONISATION  -->
+    <message type="BCM_TS" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="timestamp" label="+TS" type="Timestamp" length="16" required="true" description="Hora actual"/>
+    </message>
+    
+    <!--   CONVEYOR SET-UP  -->
+    <message type="BSM_CS" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="command" label="+CC" type="Integer" length="1" description="0-Stop, 1-Activate, 2-Dont change"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="The drop-off station number"/>
+        <field name="mode" label="+OM" type="Integer" length="1" description="0-dont stop if occupied, 1-stop if occupied, 2-Dont change mode"/>
+        <field name="destinationRequest" label="+DR" type="Integer" length="1" description="destination requests"/>
+    </message>
+    
+    <!--   REQUEST STATUS  -->
+    <message type="BSM_RS" byBlocks="false" port="low" minBodies="0" maxBodies="0">
+    </message>
+    
+    <!--   OBJECT STATUS  -->
+    <message type="BSS_OS" byBlocks="true" port="low" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="activity" label="+AC" type="String" length="2" description="Activity code"/>
+        <field name="status" label="+SC" type="String" length="2" description="Status code"/>
+    </message>
+    
+    <!--   UNIT FILLING  -->
+    <message type="BSS_UF" byBlocks="true" port="low" minBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="5" description="The Unit-ID"/>
+        <field name="fillLevel" label="+CF" type="Integer" length="4" description="Current fill level"/>
+        <field name="maxLevel" label="+MF" type="Integer" length="4" description="Maximum fill level"/>
+    </message>
+
+    <!--   BUFFER CONTROL  -->
+    <message type="BSM_BC" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="destination" label="+UD" type="Integer" length="5" description="Unit destination"/>
+        <field name="blockId" label="+BI" type="Integer" length="5" description="A unique Block-ID, only valid for the releasing process of this block."/>
+        <field name="bufferCommand" label="+BC" type="String" length="2" options="SF|PB|RB|SR|RI|FR|LB|UB" description="Buffer command"/>
+        <field name="blockBehaviour" label="+BH" type="String" length="2" options="NO|MB|ME" description="Block behaviour"/>
+        <field name="fillLevel" label="+CF" type="Integer" length="4" description="Current fill level"/>
+        <field name="maxLevel" label="+MF" type="Integer" length="4" description="Maximum fill level"/>
+    </message>
+
+    <!--   SORTER REPORT  -->
+    <message type="BSS_SR" byBlocks="false" port="low" minBodies="1" maxBodies="99">
+        <field name="position" label="+MS" type="Integer" length="6" dftType="unique" description="Position number"/>
+        <field name="runId" label="+RI" type="Integer" length="5" dftType="unique" description="RUN-ID"/>
+        <field name="telegramNumber" label="+TN" type="Integer" length="2" dftType="unique" description="Telegram number"/>
+        <field name="telegramTotal" label="+TT" type="Integer" length="2" dftType="unique" description="Telegram total"/>
+        <field name="firstSeqNumber" label="+FS" type="Integer" length="4" dftType="unique" description="Primer numero de secuencia del telegrama"/>
+        <field name="lastSeqNumber" label="+LS" type="Integer" length="4" dftType="unique" description="Ultimo numero de sequencia del telegrama"/>
+        <field name="seqStatus" label="+ST" type="Integer" length="1" options="1|2|4|8" dftType="unique" description="Status de la secuencia"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="Numero de adapters"/>
+
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+        <field name="adapterSeqNumber" label="+SQ" type="Integer" length="4" description="Numero de secuencia del adapter"/>
+        <field name="adapterStatus" label="+AS" type="String" length="2" options="UK|IS|OS" description="Status del adapter"/>
+    </message>
+
+    <!--   RUN INFORMATION  -->
+    <message type="BSS_RI" byBlocks="false" port="low" minBodies="1" maxBodies="99">
+        <field name="position" label="+MS" type="Integer" length="6" dftType="unique" description="Position number"/>
+        <field name="runQuantity" label="+RQ" type="Integer" length="2" dftType="count" description="Position number"/>
+        <field name="runId" label="+RI" type="Integer" length="5" description="RUN-ID"/>
+        <field name="runStatus" label="+RS" type="String" length="2" description="RUN-Status"/>
+    </message>
+
+    <!--   SORTER INFORMATION  -->
+    <message type="BSS_SI" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="sorterSteps" label="+1N" type="Integer" length="1" description="Number of matrix steps of the Sorter"/>
+        <field name="lanes" label="+2N" type="Integer" length="2" description="Number of sorter lanes per matrix step"/>
+        <field name="sections" label="+3N" type="Integer" length="1" description="Number of sections per sorter lane"/>
+        <field name="stepData" label="+DC" type="StepData" length="30" description="Data collection of Sorter steps"/>
+        <field name="allocationInfo" label="+AI" type="AllocationInfo" length="15" description="Allocation info Sorter"/>
+    </message>
+
+    <!--   UNIT COMMAND  -->
+    <message type="BSM_UC" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="6" description="The Unit-ID"/>
+        <field name="command" label="+UC" type="String" length="4" options="SREL|SINV|REPI|CLMS|CREL|CLRU|DCLR|DICO|ENCO|SCON|DLST|LACO|STTH|STSD|STWF" description="The Unit-Command"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--   UNIT EVENT  -->
+    <message type="BSS_UE" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="6" description="The Unit-ID"/>
+        <field name="event" label="+UE" type="String" length="4" options="RULI|RULO|RCON|BUPR|BASC" description="The Unit-Event"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--   UNIT MESSAGE  -->
+    <message type="BSS_UM" byBlocks="true" port="low" minBodies="1" maxBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="6" description="The Unit-ID"/>
+        <field name="messageNumber" label="+MN" type="String" length="5" description="Message number"/>
+        <field name="validState" label="+MV" type="Integer" length="1" options="0|1" description="0 = not valid, 1 = valid"/>
+        <field name="messageTest" label="+MT" type="String" length="80" description="Message text"/>
+    </message>
+
+    <!--   UNIT MESSAGE 2  -->
+    <message type="BSM_UM" byBlocks="true" port="low" minBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="6" description="The Unit-ID"/>
+        <field name="messageNumber" label="+MN" type="String" length="5" description="Message number"/>
+        <field name="validState" label="+MV" type="Integer" length="1" options="0|1" description="0 = not valid, 1 = valid"/>
+        <field name="messageTest" label="+MT" type="String" length="80" description="Message text"/>
+    </message>
+
+    <!--   BUILD DESTINATION GROUP  -->
+    <message type="BSM_BG" byBlocks="false" port="low" minBodies="1" maxBodies="1">
+        <field name="unitId" label="+UI" type="Integer" length="5" description="The Unit-ID"/>
+        <field name="groupId" label="+GI" type="Integer" length="5" description="The Group-ID"/>
+        <field name="groupBehaviour" label="+GB" type="String" length="4" options="NOFL|COFL|RBUF" description="Group behaviour"/>
+        <field name="master" label="+MA" type="Integer" length="5" description="Master Unit ID"/>
+        <field name="follower" label="+FO" type="Integer" length="5" description="The destination lane which should be filled next if the actual lane is full."/>
+    </message>
+
+    <!--   ORDER INFORMATION  -->
+    <message type="BSS_OI" byBlocks="false" port="low" minBodies="0" maxBodies="99">
+        <field name="unitId" label="+UI" type="Integer" length="5" dftType="unique" description="The Unit-ID"/>
+        <field name="order" label="+OR" type="Integer" length="10" dftType="unique" description="Order number for release"/>
+        <field name="orderStatus" label="+OS" type="Integer" length="1" dftType="unique" options="1|2|3|4" description="Status from the order"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" dftType="unique" description="Items quantity"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="The destination lane which should be filled next if the actual lane is full."/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+    </message>
+
+    <!--  DESTINATION REQUEST  -->
+    <message type="CTS_DR" byBlocks="false" port="high" minBodies="1" maxBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|POER" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" options="1|2" description="1 - read; 2 - no read"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  DESTINATION REQUEST  -->
+    <message type="STS_DR" byBlocks="false" port="high" minBodies="1" maxBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|POER" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" options="1|2" description="1 - read; 2 - no read"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  DESTINATION SET  -->
+    <message type="CTM_DS" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|SYER|CONK|SORT|PAST" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevant for this telegram"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  DESTINATION SET  -->
+    <message type="STM_DS" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|SYER|CONK|SORT|PAST" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevant for this telegram"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  POINT REACHED  -->
+    <message type="CTS_PR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|EADP|DEOC|POER" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" options="0|1|2" description="0 - only inducted and will be read automatically; 1 - manually scanned and inducted; 2 - only inducted"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  POINT REACHED  -->
+    <message type="STS_PR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" options="****|EADP|DEOC|POER" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" options="0|1|2" description="0 - only inducted and will be read automatically; 1 - manually scanned and inducted; 2 - only inducted"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  POINT REACHED  -->
+    <message type="CTM_PR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="TRL|BOX" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevante"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  POINT REACHED  -->
+    <message type="STM_PR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" default="****" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="TRL|BOX" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevante"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  TRANSPORT REPLY  -->
+    <message type="CTS_TR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" options="DONE|DEOC|DEUR|DINR|TODL|DIIV|DIST|NSNR" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevant for this telegram"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  TRANSPORT REPLY  -->
+    <message type="STS_TR" byBlocks="true" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>
+        <field name="returnValue" label="+RV" type="String" length="4" options="DONE|DEOC|DEUR|DINR|TODL|DIIV|DIST|NSNR" description="Return value"/>
+        <field name="typeData" label="+TD" type="String" length="3" options="BIT|SIT|ADP|TRL|BOX|TRS" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" description="scan data"/>
+        <field name="statusRead" label="+SR" type="Integer" length="1" description="Irrelevant for this telegram"/>
+        <field name="carrier" label="+CA" type="String" length="10" description="Carrier"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" description="Items quantity"/>
+        <field name="sequenceNumber" label="+SQ" type="Integer" length="4" description="Sequence Number"/>
+        <field name="info" label="+IN" type="StringInfo" length="20" description="If not used, this field is filled with 20 *"/>
+    </message>
+
+    <!--  IDENTIFICATION REPLY  -->
+    <message type="CTS_IR" byBlocks="true" port="high"  minBodies="1" maxBodies="99">
+        <field name="position" label="+MS" type="Integer" length="6" dftType="unique" description="Position number"/>
+        <field name="typeData" label="+TD" type="String" length="3" dftType="unique" options="BIT|SIT|TRL|BOX|VTU" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="20" dftType="unique" description="scan data"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="Numero de adapters"/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+    </message>
+
+    <!--  IDENTIFICATION REPLY  -->
+    <message type="STS_IR" byBlocks="true" port="high"  minBodies="1" maxBodies="99">
+        <field name="position" label="+MS" type="Integer" length="6" dftType="unique" description="Position number"/>
+        <field name="typeData" label="+TD" type="String" length="3" dftType="unique" options="BIT|SIT|TRL|BOX" description="Data types"/>
+        <field name="scanData" label="+SD" type="String" length="80" dftType="unique" description="scan data"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="Numero de adapters"/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+    </message>
+
+    <!--  RESPONSE DESTINATION SET  -->
+    <message type="CTS_RD" byBlocks="false" port="high" minBodies="1" maxBodies="99">
+        <field name="position" label="+MS" type="Integer" length="6" dftType="unique" description="Position number"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="Numero de adapters"/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+        <field name="adapterResult" label="+AR" type="Integer" length="1" options="0|1" description="0-OK; 1-Error in adapter processing"/>
+    </message>
+
+    <!--  DESTINATION MULTIPLE SET  -->
+    <message type="CTM_DM" byBlocks="false" port="high" minBodies="1" maxBodies="99">
+        <field name="unitId" label="+UI" type="Integer" length="5" dftType="unique" description="Unit id destination"/>
+        <field name="order" label="+OR" type="Integer" length="10" dftType="unique" description="Order number for release"/>
+        <field name="itemsQuantity" label="+QU" type="Integer" length="4" dftType="unique" description="Items quantity"/>
+        <field name="adapterQuantity" label="+AQ" type="Integer" length="2" dftType="count" description="The destination lane which should be filled next if the actual lane is full."/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+    </message>
+
+
+    <!-- NUEVOS -->
+    <message type="CTS_DA" byBlocks="false" port="high" minBodies="1" maxBodies="17" >
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+        <field name="statusCarrier" label="+SC" type="Integer" length="2" description="Carrier status"/>       
+    </message>
+
+    <message type="CTM_DA" byBlocks="false" port="high" minBodies="1">
+        <field name="position" label="+MS" type="Integer" length="6" description="Position number"/>
+        <field name="adapterId" label="+AD" type="Integer" length="10" description="Id del adapter"/>
+        <field name="unitId" label="+UI" type="Integer" length="5" description="Unit id destination"/>               
+    </message>
+
+</protocol>

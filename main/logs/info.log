@@ -1,0 +1,1264 @@
+2025-11-26 13:57:04 - INFO - Arrancamos el emulador
+2025-11-26 13:57:04 - INFO - plc
+2025-11-26 13:57:04 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001D56EB3CAD0>, 'contador': 0}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001D56EB3C710>, 'contador': 0}}
+2025-11-26 13:57:04 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-26 13:57:04 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-26 13:57:04 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-26 13:57:04 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-26 13:57:04 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-26 13:57:04 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-26 13:57:54 - INFO - Arrancamos el emulador
+2025-11-26 13:57:54 - INFO - plc
+2025-11-26 13:57:54 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x00000225DA046780>, 'contador': 0}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x00000225DA046510>, 'contador': 0}}
+2025-11-26 13:57:54 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-26 13:57:54 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-26 13:57:54 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-26 13:57:54 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-26 13:57:54 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-26 13:57:54 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-26 13:57:54 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 11:48:15 - INFO - Arrancamos el emulador
+2025-11-27 11:48:15 - INFO - plc
+2025-11-27 11:48:15 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000017E58567B30>, 'contador': 0}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000017E585B2840>, 'contador': 0}}
+2025-11-27 11:48:16 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-27 11:48:16 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-27 11:48:16 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-27 11:48:16 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-27 11:48:16 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:48:16 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.245.238:50001
+2025-11-27 11:48:16 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 11:48:31 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:54:44 - INFO - Arrancamos el emulador
+2025-11-27 11:54:44 - INFO - plc
+2025-11-27 11:54:44 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001E29C984EC0>, 'contador': 0}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001E29CA025D0>, 'contador': 0}}
+2025-11-27 11:54:44 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-27 11:54:44 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-27 11:54:44 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-27 11:54:44 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-27 11:54:44 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:54:44 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.245.238:50001
+2025-11-27 11:54:44 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 11:54:59 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:55:14 - INFO - Encolado mensaje:TSC2MFCS011602EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:55:29 - INFO - Encolado mensaje:TSC2MFCS011603EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:55:36 - INFO - Conexión establecida desde ('127.0.0.1', 57089) en puerto PLC1.in
+
+2025-11-27 11:55:36 - INFO - Conexión establecida desde ('127.0.0.1', 57088) en puerto PLC1.out
+
+2025-11-27 11:55:36 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:55:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-27 11:55:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:55:36 - INFO - Enviado:b'TSC2MFCS011601EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:55:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-27 11:55:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:55:36 - INFO - Enviado:b'TSC2MFCS011602EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:55:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002802EEQQ0000ACKN
+
+2025-11-27 11:55:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:55:36 - INFO - Enviado:b'TSC2MFCS011603EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:55:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002803EEQQ0000ACKN
+
+2025-11-27 11:55:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:55:44 - INFO - Encolado mensaje:TSC2MFCS011604EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:55:44 - INFO - Enviado:b'TSC2MFCS011604EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:55:44 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002804EEQQ0000ACKN
+
+2025-11-27 11:55:44 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:55:59 - INFO - Encolado mensaje:TSC2MFCS011605EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:56:00 - INFO - Enviado:b'TSC2MFCS011605EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:56:00 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002805EEQQ0000ACKN
+
+2025-11-27 11:56:00 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:56:14 - INFO - Encolado mensaje:TSC2MFCS011606EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:56:15 - INFO - Enviado:b'TSC2MFCS011606EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:56:15 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002806EEQQ0000ACKN
+
+2025-11-27 11:56:15 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:56:29 - INFO - Encolado mensaje:TSC2MFCS011607EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:56:30 - INFO - Enviado:b'TSC2MFCS011607EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:56:30 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002807EEQQ0000ACKN
+
+2025-11-27 11:56:30 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:56:36 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600EE99************************************************************************************************
+
+2025-11-27 11:56:36 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 11:56:36 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 11:56:36 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 11:56:44 - INFO - Encolado mensaje:TSC2MFCS011608EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:56:45 - INFO - Enviado:b'TSC2MFCS011608EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:56:45 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002808EEQQ0000ACKN
+
+2025-11-27 11:56:45 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:56:59 - INFO - Encolado mensaje:TSC2MFCS011609EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:57:00 - INFO - Enviado:b'TSC2MFCS011609EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:57:00 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002809EEQQ0000ACKN
+
+2025-11-27 11:57:00 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:57:14 - INFO - Encolado mensaje:TSC2MFCS011610EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:57:15 - INFO - Enviado:b'TSC2MFCS011610EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:57:15 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002810EEQQ0000ACKN
+
+2025-11-27 11:57:15 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:57:29 - INFO - Encolado mensaje:TSC2MFCS011611EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:57:30 - INFO - Enviado:b'TSC2MFCS011611EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:57:30 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002811EEQQ0000ACKN
+
+2025-11-27 11:57:30 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:57:36 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011601EE99************************************************************************************************
+
+2025-11-27 11:57:36 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 11:57:36 - INFO - Encolado ACK:TSC2MFCS002801EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 11:57:36 - INFO - Enviado:b'TSC2MFCS002801EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 11:57:44 - INFO - Encolado mensaje:TSC2MFCS011612EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:57:45 - INFO - Enviado:b'TSC2MFCS011612EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:57:45 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002812EEQQ0000ACKN
+
+2025-11-27 11:57:45 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:57:59 - INFO - Encolado mensaje:TSC2MFCS011613EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:57:59 - INFO - Enviado:b'TSC2MFCS011613EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:57:59 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002813EEQQ0000ACKN
+
+2025-11-27 11:57:59 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:58:14 - INFO - Encolado mensaje:TSC2MFCS011614EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:58:15 - INFO - Enviado:b'TSC2MFCS011614EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:58:15 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002814EEQQ0000ACKN
+
+2025-11-27 11:58:15 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:58:29 - INFO - Encolado mensaje:TSC2MFCS011615EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:58:30 - INFO - Enviado:b'TSC2MFCS011615EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:58:30 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002815EEQQ0000ACKN
+
+2025-11-27 11:58:30 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:58:36 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011602EE99************************************************************************************************
+
+2025-11-27 11:58:36 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 11:58:36 - INFO - Encolado ACK:TSC2MFCS002802EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 11:58:36 - INFO - Enviado:b'TSC2MFCS002802EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 11:58:44 - INFO - Encolado mensaje:TSC2MFCS011616EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:58:45 - INFO - Enviado:b'TSC2MFCS011616EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:58:45 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002816EEQQ0000ACKN
+
+2025-11-27 11:58:45 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:59:00 - INFO - Encolado mensaje:TSC2MFCS011617EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:59:00 - INFO - Enviado:b'TSC2MFCS011617EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:59:00 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002817EEQQ0000ACKN
+
+2025-11-27 11:59:00 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:59:15 - INFO - Encolado mensaje:TSC2MFCS011618EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:59:15 - INFO - Enviado:b'TSC2MFCS011618EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:59:15 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002818EEQQ0000ACKN
+
+2025-11-27 11:59:15 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:59:30 - INFO - Encolado mensaje:TSC2MFCS011619EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:59:30 - INFO - Enviado:b'TSC2MFCS011619EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:59:30 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002819EEQQ0000ACKN
+
+2025-11-27 11:59:30 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 11:59:36 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011603EE99************************************************************************************************
+
+2025-11-27 11:59:36 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 11:59:36 - INFO - Encolado ACK:TSC2MFCS002803EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 11:59:36 - INFO - Enviado:b'TSC2MFCS002803EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 11:59:45 - INFO - Encolado mensaje:TSC2MFCS011620EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 11:59:45 - INFO - Enviado:b'TSC2MFCS011620EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 11:59:45 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002820EEQQ0000ACKN
+
+2025-11-27 11:59:45 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:00:00 - INFO - Encolado mensaje:TSC2MFCS011621EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:00:00 - INFO - Enviado:b'TSC2MFCS011621EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:00:00 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002821EEQQ0000ACKN
+
+2025-11-27 12:00:00 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:00:15 - INFO - Encolado mensaje:TSC2MFCS011622EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:00:15 - INFO - Enviado:b'TSC2MFCS011622EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:00:15 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002822EEQQ0000ACKN
+
+2025-11-27 12:00:15 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:00:30 - INFO - Encolado mensaje:TSC2MFCS011623EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:00:30 - INFO - Enviado:b'TSC2MFCS011623EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:00:30 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002823EEQQ0000ACKN
+
+2025-11-27 12:00:30 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:00:36 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011604EE99************************************************************************************************
+
+2025-11-27 12:00:36 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 12:00:36 - INFO - Encolado ACK:TSC2MFCS002804EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 12:00:36 - INFO - Enviado:b'TSC2MFCS002804EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 12:00:45 - INFO - Encolado mensaje:TSC2MFCS011624EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:00:45 - INFO - Enviado:b'TSC2MFCS011624EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:00:45 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002824EEQQ0000ACKN
+
+2025-11-27 12:00:45 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:01:00 - INFO - Encolado mensaje:TSC2MFCS011625EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:01:00 - INFO - Enviado:b'TSC2MFCS011625EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:01:00 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002825EEQQ0000ACKN
+
+2025-11-27 12:01:00 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:18:32 - INFO - Arrancamos el emulador
+2025-11-27 12:18:32 - INFO - plc
+2025-11-27 12:18:32 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000019B9A0A6A20>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000019B9A0A66C0>, 'contador': 0, 'conectado': False}}
+2025-11-27 12:18:32 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-27 12:18:32 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-27 12:18:32 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-27 12:18:32 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-27 12:18:32 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.245.238:50001
+2025-11-27 12:18:32 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 12:19:29 - INFO - Conexión establecida desde ('127.0.0.1', 62286) en puerto PLC1.in
+
+2025-11-27 12:19:29 - INFO - Conexión establecida desde ('127.0.0.1', 62285) en puerto PLC1.out
+
+2025-11-27 12:19:32 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:19:32 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:19:32 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-27 12:19:32 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:19:47 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:19:47 - INFO - Enviado:b'TSC2MFCS011601EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:19:47 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-27 12:19:47 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:20:02 - INFO - Encolado mensaje:TSC2MFCS011602EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:20:02 - INFO - Enviado:b'TSC2MFCS011602EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:20:02 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002802EEQQ0000ACKN
+
+2025-11-27 12:20:02 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:20:17 - INFO - Encolado mensaje:TSC2MFCS011603EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:20:17 - INFO - Enviado:b'TSC2MFCS011603EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:20:17 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002803EEQQ0000ACKN
+
+2025-11-27 12:20:17 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:20:29 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600EE99************************************************************************************************
+
+2025-11-27 12:20:29 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 12:20:29 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 12:20:29 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 12:20:32 - INFO - Encolado mensaje:TSC2MFCS011604EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:20:32 - INFO - Enviado:b'TSC2MFCS011604EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:20:32 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002804EEQQ0000ACKN
+
+2025-11-27 12:20:32 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:20:47 - INFO - Encolado mensaje:TSC2MFCS011605EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:20:47 - INFO - Enviado:b'TSC2MFCS011605EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:20:47 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002805EEQQ0000ACKN
+
+2025-11-27 12:20:47 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:21:02 - INFO - Encolado mensaje:TSC2MFCS011606EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:21:02 - INFO - Enviado:b'TSC2MFCS011606EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:21:02 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002806EEQQ0000ACKN
+
+2025-11-27 12:21:02 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:21:17 - INFO - Encolado mensaje:TSC2MFCS011607EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:21:17 - INFO - Enviado:b'TSC2MFCS011607EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:21:17 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002807EEQQ0000ACKN
+
+2025-11-27 12:21:17 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:21:29 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011601EE99************************************************************************************************
+
+2025-11-27 12:21:29 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 12:21:29 - INFO - Encolado ACK:TSC2MFCS002801EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 12:21:29 - INFO - Enviado:b'TSC2MFCS002801EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 12:21:32 - INFO - Encolado mensaje:TSC2MFCS011608EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:21:32 - INFO - Enviado:b'TSC2MFCS011608EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:21:32 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002808EEQQ0000ACKN
+
+2025-11-27 12:21:32 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:21:47 - INFO - Encolado mensaje:TSC2MFCS011609EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:21:47 - INFO - Enviado:b'TSC2MFCS011609EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:21:47 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002809EEQQ0000ACKN
+
+2025-11-27 12:21:47 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:21:53 - INFO - 127.0.0.1 - - [27/Nov/2025 12:21:53] "GET / HTTP/1.1" 200 -
+2025-11-27 12:21:53 - INFO - 127.0.0.1 - - [27/Nov/2025 12:21:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-27 12:22:02 - INFO - Encolado mensaje:TSC2MFCS011610EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:22:02 - INFO - Enviado:b'TSC2MFCS011610EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:22:02 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002810EEQQ0000ACKN
+
+2025-11-27 12:22:02 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:22:04 - INFO - Datos recibidos del formulario:
+2025-11-27 12:22:04 - INFO - Encolado mensaje:TSC2MFCS011611EE61PM1SH001******************1111111111************************************************************
+ en socket PLC1.out
+2025-11-27 12:22:04 - INFO - 127.0.0.1 - - [27/Nov/2025 12:22:04] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-11-27 12:22:04 - INFO - Enviado:b'TSC2MFCS011611EE61PM1SH001******************1111111111************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:22:04 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002811EEQQ0000ACKN
+
+2025-11-27 12:22:04 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:22:04 - INFO - 127.0.0.1 - - [27/Nov/2025 12:22:04] "GET / HTTP/1.1" 200 -
+2025-11-27 12:22:17 - INFO - Encolado mensaje:TSC2MFCS011612EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:22:17 - INFO - Enviado:b'TSC2MFCS011612EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:22:17 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002812EEQQ0000ACKN
+
+2025-11-27 12:22:17 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:22:30 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011602EE99************************************************************************************************
+
+2025-11-27 12:22:30 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 12:22:30 - INFO - Encolado ACK:TSC2MFCS002802EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 12:22:30 - INFO - Enviado:b'TSC2MFCS002802EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 12:22:32 - INFO - Encolado mensaje:TSC2MFCS011613EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:22:32 - INFO - Enviado:b'TSC2MFCS011613EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:22:32 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002813EEQQ0000ACKN
+
+2025-11-27 12:22:32 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:22:47 - INFO - Encolado mensaje:TSC2MFCS011614EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:22:47 - INFO - Enviado:b'TSC2MFCS011614EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:22:47 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002814EEQQ0000ACKN
+
+2025-11-27 12:22:47 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:23:02 - INFO - Encolado mensaje:TSC2MFCS011615EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:23:02 - INFO - Enviado:b'TSC2MFCS011615EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:23:02 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002815EEQQ0000ACKN
+
+2025-11-27 12:23:02 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:23:17 - INFO - Encolado mensaje:TSC2MFCS011616EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:23:17 - INFO - Enviado:b'TSC2MFCS011616EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-27 12:23:17 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002816EEQQ0000ACKN
+
+2025-11-27 12:23:17 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-27 12:24:02 - INFO - Arrancamos el emulador
+2025-11-27 12:24:02 - INFO - plc
+2025-11-27 12:24:02 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000017CDB86F200>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000017CDB86EBD0>, 'contador': 0, 'conectado': False}}
+2025-11-27 12:24:02 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-27 12:24:02 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-27 12:24:02 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-27 12:24:02 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-27 12:24:02 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.245.238:50001
+2025-11-27 12:24:02 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 12:24:02 - INFO - Conexión establecida desde ('127.0.0.1', 56897) en puerto PLC1.out
+
+2025-11-27 12:24:02 - INFO - Conexión establecida desde ('127.0.0.1', 56896) en puerto PLC1.in
+
+2025-11-27 12:24:02 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600WW99************************************************************************************************
+
+2025-11-27 12:24:02 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-27 12:24:02 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-27 12:24:02 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-27 12:24:17 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-27 12:24:17 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 11:01:25 - INFO - Arrancamos el emulador
+2025-11-28 11:01:25 - INFO - plc
+2025-11-28 11:01:25 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000002E136353080>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000002E136352BA0>, 'contador': 0, 'conectado': False}}
+2025-11-28 11:01:25 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 11:01:25 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 11:01:25 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 11:01:25 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 11:01:26 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 11:01:26 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 11:01:33 - INFO - 127.0.0.1 - - [28/Nov/2025 11:01:33] "GET / HTTP/1.1" 200 -
+2025-11-28 11:01:33 - INFO - 127.0.0.1 - - [28/Nov/2025 11:01:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-28 12:48:07 - INFO - Arrancamos el emulador
+2025-11-28 12:48:07 - INFO - plc
+2025-11-28 12:48:07 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000025B29B572F0>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000025B29B57080>, 'contador': 0, 'conectado': False}}
+2025-11-28 12:48:07 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 12:48:07 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 12:48:07 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 12:48:07 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 12:48:07 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 12:48:07 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 12:48:18 - INFO - Conexión establecida desde ('127.0.0.1', 55878) en puerto PLC1.out
+
+2025-11-28 12:48:18 - INFO - Conexión establecida desde ('127.0.0.1', 55879) en puerto PLC1.in
+
+2025-11-28 12:48:22 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:48:23 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:48:23 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-28 12:48:23 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:48:27 - INFO - 127.0.0.1 - - [28/Nov/2025 12:48:27] "GET / HTTP/1.1" 200 -
+2025-11-28 12:48:37 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:48:38 - INFO - Enviado:b'TSC2MFCS011601EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:48:38 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-28 12:48:38 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:48:51 - INFO - Datos recibidos del formulario:
+2025-11-28 12:48:51 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\loopBase.py", line 127, in formulario
+    protocolos[conexion_obj["protocolo"]]["crea"](conexion_obj, datos)
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\protocols\aberle.py", line 188, in crea
+    mensaje = ee61p(datos)
+              ^^^^^^^^^^^^
+TypeError: ee61p() missing 1 required positional argument: 'root'
+2025-11-28 12:48:51 - INFO - 127.0.0.1 - - [28/Nov/2025 12:48:51] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-11-28 12:48:52 - INFO - Encolado mensaje:TSC2MFCS011602EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:48:53 - INFO - Enviado:b'TSC2MFCS011602EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:48:53 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002802EEQQ0000ACKN
+
+2025-11-28 12:48:53 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:49:57 - INFO - Arrancamos el emulador
+2025-11-28 12:49:57 - INFO - plc
+2025-11-28 12:49:57 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001E20F0E72F0>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001E20F0E7080>, 'contador': 0, 'conectado': False}}
+2025-11-28 12:49:58 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 12:49:58 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 12:49:58 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 12:49:58 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 12:49:58 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 12:49:58 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 12:49:59 - INFO - Conexión establecida desde ('127.0.0.1', 57283) en puerto PLC1.in
+
+2025-11-28 12:49:59 - INFO - Conexión establecida desde ('127.0.0.1', 57284) en puerto PLC1.out
+
+2025-11-28 12:49:59 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600WW99************************************************************************************************
+
+2025-11-28 12:49:59 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:49:59 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:49:59 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 12:50:09 - INFO - Datos recibidos del formulario:
+2025-11-28 12:50:09 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\loopBase.py", line 127, in formulario
+    protocolos[conexion_obj["protocolo"]]["crea"](conexion_obj, datos)
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\protocols\aberle.py", line 188, in crea
+    mensaje = ee61p(datos,root)
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\protocols\aberle.py", line 77, in ee61p
+    cnt = str((int(datos["altura"]) //100) *100)
+                   ~~~~~^^^^^^^^^^
+KeyError: 'altura'
+2025-11-28 12:50:09 - INFO - 127.0.0.1 - - [28/Nov/2025 12:50:09] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-11-28 12:50:13 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:50:13 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:50:13 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-28 12:50:13 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:50:15 - INFO - 127.0.0.1 - - [28/Nov/2025 12:50:15] "GET / HTTP/1.1" 200 -
+2025-11-28 12:50:28 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:50:28 - INFO - Enviado:b'TSC2MFCS011601EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:50:28 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-28 12:50:28 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:51:34 - INFO - Arrancamos el emulador
+2025-11-28 12:51:34 - INFO - plc
+2025-11-28 12:51:34 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001BA1CE472F0>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x000001BA1CE47080>, 'contador': 0, 'conectado': False}}
+2025-11-28 12:51:34 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 12:51:34 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 12:51:34 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 12:51:34 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 12:51:34 - INFO - Conexión establecida desde ('127.0.0.1', 60852) en puerto PLC1.out
+
+2025-11-28 12:51:34 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 12:51:34 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 12:51:35 - INFO - Conexión establecida desde ('127.0.0.1', 60853) en puerto PLC1.in
+
+2025-11-28 12:51:35 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600WW99************************************************************************************************
+
+2025-11-28 12:51:35 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:51:35 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:51:35 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 12:51:40 - INFO - 127.0.0.1 - - [28/Nov/2025 12:51:40] "GET / HTTP/1.1" 200 -
+2025-11-28 12:51:49 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:51:49 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:51:49 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-28 12:51:49 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:51:59 - INFO - Datos recibidos del formulario:
+2025-11-28 12:51:59 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WPy64-31280\python\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\loopBase.py", line 127, in formulario
+    protocolos[conexion_obj["protocolo"]]["crea"](conexion_obj, datos)
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\protocols\aberle.py", line 194, in crea
+    mensaje = cabecera (conexion,mensaje)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A19735744\eclipse-workspace\mfc-emu\main\protocols\aberle.py", line 32, in cabecera
+    mida = 12 + 2 + len(mensaje)+2
+                    ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-11-28 12:51:59 - INFO - 127.0.0.1 - - [28/Nov/2025 12:51:59] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-11-28 12:55:40 - INFO - Arrancamos el emulador
+2025-11-28 12:55:40 - INFO - plc
+2025-11-28 12:55:40 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000020F1E4B72F0>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000020F1E4B7080>, 'contador': 0, 'conectado': False}}
+2025-11-28 12:55:40 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 12:55:40 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 12:55:40 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 12:55:40 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 12:55:40 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 12:55:40 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 12:55:46 - INFO - Conexión establecida desde ('127.0.0.1', 55012) en puerto PLC1.out
+
+2025-11-28 12:55:46 - INFO - Conexión establecida desde ('127.0.0.1', 55013) en puerto PLC1.in
+
+2025-11-28 12:55:51 - INFO - Datos recibidos del formulario:
+2025-11-28 12:55:51 - INFO - Encolado mensaje:TSC2MFCS011600EE61PM1SH001******************2222222222******************00012345**030400****0400******************
+ en socket PLC1.out
+2025-11-28 12:55:51 - INFO - 127.0.0.1 - - [28/Nov/2025 12:55:51] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-11-28 12:55:51 - INFO - 127.0.0.1 - - [28/Nov/2025 12:55:51] "GET / HTTP/1.1" 200 -
+2025-11-28 12:55:51 - INFO - Enviado:b'TSC2MFCS011600EE61PM1SH001******************2222222222******************00012345**030400****0400******************\r\n' en puerto PLC1.out
+
+2025-11-28 12:55:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-28 12:55:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:55:55 - INFO - Encolado mensaje:TSC2MFCS011601EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:55:55 - INFO - Enviado:b'TSC2MFCS011601EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:55:55 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-28 12:55:55 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:56:10 - INFO - Encolado mensaje:TSC2MFCS011602EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:56:10 - INFO - Enviado:b'TSC2MFCS011602EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:56:10 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002802EEQQ0000ACKN
+
+2025-11-28 12:56:10 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:56:25 - INFO - Encolado mensaje:TSC2MFCS011603EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:56:25 - INFO - Enviado:b'TSC2MFCS011603EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:56:25 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002803EEQQ0000ACKN
+
+2025-11-28 12:56:25 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:56:40 - INFO - Encolado mensaje:TSC2MFCS011604EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:56:40 - INFO - Enviado:b'TSC2MFCS011604EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:56:40 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002804EEQQ0000ACKN
+
+2025-11-28 12:56:40 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:56:46 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600EE99************************************************************************************************
+
+2025-11-28 12:56:46 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:56:46 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:56:46 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 12:56:51 - INFO - Arrancamos el emulador
+2025-11-28 12:56:51 - INFO - plc
+2025-11-28 12:56:51 - INFO - {'PLC1.in': {'id_plc': 'PLC1', 'id_puerto': 'in', 'protocolo': 'aberle', 'puerto': 5001, 'kal': False, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000010ECD9472F0>, 'contador': 0, 'conectado': False}, 'PLC1.out': {'id_plc': 'PLC1', 'id_puerto': 'out', 'protocolo': 'aberle', 'puerto': 5000, 'kal': True, 'kal.time': 15, 'sender': 'TSC2', 'receiver': 'MFCS', 'cola': <queue.Queue object at 0x0000010ECD947080>, 'contador': 0, 'conectado': False}}
+2025-11-28 12:56:51 - INFO - conexion:PLC1.in 5001 - creando thread
+2025-11-28 12:56:51 - INFO - conexion:PLC1.out 5000 - creando thread
+2025-11-28 12:56:51 - INFO - Escuchando en 0.0.0.0:5000...
+2025-11-28 12:56:51 - INFO - Escuchando en 0.0.0.0:5001...
+2025-11-28 12:56:51 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.152.233:50001
+2025-11-28 12:56:51 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-28 12:56:52 - INFO - Conexión establecida desde ('127.0.0.1', 49821) en puerto PLC1.out
+
+2025-11-28 12:56:52 - INFO - Conexión establecida desde ('127.0.0.1', 49820) en puerto PLC1.in
+
+2025-11-28 12:57:06 - INFO - Encolado mensaje:TSC2MFCS011600EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:57:06 - INFO - Enviado:b'TSC2MFCS011600EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:57:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002800EEQQ0000ACKN
+
+2025-11-28 12:57:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:57:16 - INFO - Datos recibidos del formulario:
+2025-11-28 12:57:16 - INFO - Encolado mensaje:TSC2MFCS011601EE61PM1DI001******************2222222222******************00012345**03040006000400******************
+ en socket PLC1.out
+2025-11-28 12:57:16 - INFO - 127.0.0.1 - - [28/Nov/2025 12:57:16] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-11-28 12:57:16 - INFO - 127.0.0.1 - - [28/Nov/2025 12:57:16] "GET / HTTP/1.1" 200 -
+2025-11-28 12:57:16 - INFO - Enviado:b'TSC2MFCS011601EE61PM1DI001******************2222222222******************00012345**03040006000400******************\r\n' en puerto PLC1.out
+
+2025-11-28 12:57:16 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002801EEQQ0000ACKN
+
+2025-11-28 12:57:16 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:57:21 - INFO - Encolado mensaje:TSC2MFCS011602EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:57:21 - INFO - Enviado:b'TSC2MFCS011602EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:57:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002802EEQQ0000ACKN
+
+2025-11-28 12:57:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:57:36 - INFO - Encolado mensaje:TSC2MFCS011603EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:57:36 - INFO - Enviado:b'TSC2MFCS011603EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:57:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002803EEQQ0000ACKN
+
+2025-11-28 12:57:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:57:51 - INFO - Encolado mensaje:TSC2MFCS011604EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:57:51 - INFO - Enviado:b'TSC2MFCS011604EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:57:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002804EEQQ0000ACKN
+
+2025-11-28 12:57:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:57:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011600EE99************************************************************************************************
+
+2025-11-28 12:57:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:57:52 - INFO - Encolado ACK:TSC2MFCS002800EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:57:52 - INFO - Enviado:b'TSC2MFCS002800EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 12:58:06 - INFO - Encolado mensaje:TSC2MFCS011605EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:58:06 - INFO - Enviado:b'TSC2MFCS011605EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:58:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002805EEQQ0000ACKN
+
+2025-11-28 12:58:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:58:21 - INFO - Encolado mensaje:TSC2MFCS011606EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:58:21 - INFO - Enviado:b'TSC2MFCS011606EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:58:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002806EEQQ0000ACKN
+
+2025-11-28 12:58:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:58:36 - INFO - Encolado mensaje:TSC2MFCS011607EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:58:36 - INFO - Enviado:b'TSC2MFCS011607EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:58:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002807EEQQ0000ACKN
+
+2025-11-28 12:58:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:58:51 - INFO - Encolado mensaje:TSC2MFCS011608EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:58:51 - INFO - Enviado:b'TSC2MFCS011608EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:58:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002808EEQQ0000ACKN
+
+2025-11-28 12:58:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:58:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011601EE99************************************************************************************************
+
+2025-11-28 12:58:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:58:52 - INFO - Encolado ACK:TSC2MFCS002801EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:58:52 - INFO - Enviado:b'TSC2MFCS002801EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 12:59:06 - INFO - Encolado mensaje:TSC2MFCS011609EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:59:06 - INFO - Enviado:b'TSC2MFCS011609EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:59:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002809EEQQ0000ACKN
+
+2025-11-28 12:59:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:59:21 - INFO - Encolado mensaje:TSC2MFCS011610EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:59:21 - INFO - Enviado:b'TSC2MFCS011610EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:59:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002810EEQQ0000ACKN
+
+2025-11-28 12:59:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:59:36 - INFO - Encolado mensaje:TSC2MFCS011611EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:59:36 - INFO - Enviado:b'TSC2MFCS011611EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:59:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002811EEQQ0000ACKN
+
+2025-11-28 12:59:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:59:51 - INFO - Encolado mensaje:TSC2MFCS011612EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 12:59:51 - INFO - Enviado:b'TSC2MFCS011612EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 12:59:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002812EEQQ0000ACKN
+
+2025-11-28 12:59:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 12:59:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011602EE99************************************************************************************************
+
+2025-11-28 12:59:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 12:59:52 - INFO - Encolado ACK:TSC2MFCS002802EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 12:59:52 - INFO - Enviado:b'TSC2MFCS002802EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:00:06 - INFO - Encolado mensaje:TSC2MFCS011613EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:00:06 - INFO - Enviado:b'TSC2MFCS011613EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:00:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002813EEQQ0000ACKN
+
+2025-11-28 13:00:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:00:21 - INFO - Encolado mensaje:TSC2MFCS011614EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:00:21 - INFO - Enviado:b'TSC2MFCS011614EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:00:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002814EEQQ0000ACKN
+
+2025-11-28 13:00:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:00:36 - INFO - Encolado mensaje:TSC2MFCS011615EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:00:36 - INFO - Enviado:b'TSC2MFCS011615EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:00:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002815EEQQ0000ACKN
+
+2025-11-28 13:00:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:00:51 - INFO - Encolado mensaje:TSC2MFCS011616EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:00:51 - INFO - Enviado:b'TSC2MFCS011616EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:00:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002816EEQQ0000ACKN
+
+2025-11-28 13:00:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:00:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011603EE99************************************************************************************************
+
+2025-11-28 13:00:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:00:52 - INFO - Encolado ACK:TSC2MFCS002803EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:00:52 - INFO - Enviado:b'TSC2MFCS002803EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:01:06 - INFO - Encolado mensaje:TSC2MFCS011617EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:01:06 - INFO - Enviado:b'TSC2MFCS011617EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:01:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002817EEQQ0000ACKN
+
+2025-11-28 13:01:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:01:21 - INFO - Encolado mensaje:TSC2MFCS011618EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:01:21 - INFO - Enviado:b'TSC2MFCS011618EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:01:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002818EEQQ0000ACKN
+
+2025-11-28 13:01:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:01:36 - INFO - Encolado mensaje:TSC2MFCS011619EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:01:36 - INFO - Enviado:b'TSC2MFCS011619EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:01:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002819EEQQ0000ACKN
+
+2025-11-28 13:01:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:01:51 - INFO - Encolado mensaje:TSC2MFCS011620EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:01:51 - INFO - Enviado:b'TSC2MFCS011620EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:01:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002820EEQQ0000ACKN
+
+2025-11-28 13:01:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:01:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011604EE99************************************************************************************************
+
+2025-11-28 13:01:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:01:52 - INFO - Encolado ACK:TSC2MFCS002804EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:01:52 - INFO - Enviado:b'TSC2MFCS002804EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:02:06 - INFO - Encolado mensaje:TSC2MFCS011621EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:02:06 - INFO - Enviado:b'TSC2MFCS011621EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:02:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002821EEQQ0000ACKN
+
+2025-11-28 13:02:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:02:21 - INFO - Encolado mensaje:TSC2MFCS011622EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:02:21 - INFO - Enviado:b'TSC2MFCS011622EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:02:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002822EEQQ0000ACKN
+
+2025-11-28 13:02:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:02:36 - INFO - Encolado mensaje:TSC2MFCS011623EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:02:36 - INFO - Enviado:b'TSC2MFCS011623EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:02:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002823EEQQ0000ACKN
+
+2025-11-28 13:02:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:02:51 - INFO - Encolado mensaje:TSC2MFCS011624EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:02:51 - INFO - Enviado:b'TSC2MFCS011624EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:02:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002824EEQQ0000ACKN
+
+2025-11-28 13:02:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:02:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011605EE99************************************************************************************************
+
+2025-11-28 13:02:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:02:52 - INFO - Encolado ACK:TSC2MFCS002805EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:02:52 - INFO - Enviado:b'TSC2MFCS002805EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:03:06 - INFO - Encolado mensaje:TSC2MFCS011625EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:03:06 - INFO - Enviado:b'TSC2MFCS011625EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:03:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002825EEQQ0000ACKN
+
+2025-11-28 13:03:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:03:21 - INFO - Encolado mensaje:TSC2MFCS011626EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:03:21 - INFO - Enviado:b'TSC2MFCS011626EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:03:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002826EEQQ0000ACKN
+
+2025-11-28 13:03:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:03:36 - INFO - Encolado mensaje:TSC2MFCS011627EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:03:36 - INFO - Enviado:b'TSC2MFCS011627EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:03:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002827EEQQ0000ACKN
+
+2025-11-28 13:03:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:03:51 - INFO - Encolado mensaje:TSC2MFCS011628EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:03:51 - INFO - Enviado:b'TSC2MFCS011628EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:03:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002828EEQQ0000ACKN
+
+2025-11-28 13:03:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:03:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011606EE99************************************************************************************************
+
+2025-11-28 13:03:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:03:52 - INFO - Encolado ACK:TSC2MFCS002806EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:03:52 - INFO - Enviado:b'TSC2MFCS002806EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:04:06 - INFO - Encolado mensaje:TSC2MFCS011629EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:04:06 - INFO - Enviado:b'TSC2MFCS011629EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:04:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002829EEQQ0000ACKN
+
+2025-11-28 13:04:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:04:21 - INFO - Encolado mensaje:TSC2MFCS011630EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:04:21 - INFO - Enviado:b'TSC2MFCS011630EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:04:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002830EEQQ0000ACKN
+
+2025-11-28 13:04:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:04:36 - INFO - Encolado mensaje:TSC2MFCS011631EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:04:36 - INFO - Enviado:b'TSC2MFCS011631EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:04:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002831EEQQ0000ACKN
+
+2025-11-28 13:04:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:04:51 - INFO - Encolado mensaje:TSC2MFCS011632EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:04:51 - INFO - Enviado:b'TSC2MFCS011632EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:04:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002832EEQQ0000ACKN
+
+2025-11-28 13:04:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:04:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011607EE99************************************************************************************************
+
+2025-11-28 13:04:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:04:52 - INFO - Encolado ACK:TSC2MFCS002807EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:04:52 - INFO - Enviado:b'TSC2MFCS002807EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:05:06 - INFO - Encolado mensaje:TSC2MFCS011633EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:05:06 - INFO - Enviado:b'TSC2MFCS011633EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:05:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002833EEQQ0000ACKN
+
+2025-11-28 13:05:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:05:21 - INFO - Encolado mensaje:TSC2MFCS011634EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:05:21 - INFO - Enviado:b'TSC2MFCS011634EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:05:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002834EEQQ0000ACKN
+
+2025-11-28 13:05:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:05:36 - INFO - Encolado mensaje:TSC2MFCS011635EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:05:36 - INFO - Enviado:b'TSC2MFCS011635EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:05:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002835EEQQ0000ACKN
+
+2025-11-28 13:05:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:05:51 - INFO - Encolado mensaje:TSC2MFCS011636EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:05:51 - INFO - Enviado:b'TSC2MFCS011636EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:05:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002836EEQQ0000ACKN
+
+2025-11-28 13:05:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:05:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011608EE99************************************************************************************************
+
+2025-11-28 13:05:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:05:52 - INFO - Encolado ACK:TSC2MFCS002808EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:05:52 - INFO - Enviado:b'TSC2MFCS002808EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:06:06 - INFO - Encolado mensaje:TSC2MFCS011637EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:06:06 - INFO - Enviado:b'TSC2MFCS011637EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:06:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002837EEQQ0000ACKN
+
+2025-11-28 13:06:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:06:21 - INFO - Encolado mensaje:TSC2MFCS011638EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:06:21 - INFO - Enviado:b'TSC2MFCS011638EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:06:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002838EEQQ0000ACKN
+
+2025-11-28 13:06:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:06:36 - INFO - Encolado mensaje:TSC2MFCS011639EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:06:36 - INFO - Enviado:b'TSC2MFCS011639EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:06:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002839EEQQ0000ACKN
+
+2025-11-28 13:06:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:06:51 - INFO - Encolado mensaje:TSC2MFCS011640EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:06:51 - INFO - Enviado:b'TSC2MFCS011640EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:06:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002840EEQQ0000ACKN
+
+2025-11-28 13:06:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:06:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011609EE99************************************************************************************************
+
+2025-11-28 13:06:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:06:52 - INFO - Encolado ACK:TSC2MFCS002809EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:06:52 - INFO - Enviado:b'TSC2MFCS002809EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:07:06 - INFO - Encolado mensaje:TSC2MFCS011641EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:07:06 - INFO - Enviado:b'TSC2MFCS011641EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:07:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002841EEQQ0000ACKN
+
+2025-11-28 13:07:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:07:21 - INFO - Encolado mensaje:TSC2MFCS011642EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:07:21 - INFO - Enviado:b'TSC2MFCS011642EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:07:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002842EEQQ0000ACKN
+
+2025-11-28 13:07:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:07:36 - INFO - Encolado mensaje:TSC2MFCS011643EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:07:36 - INFO - Enviado:b'TSC2MFCS011643EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:07:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002843EEQQ0000ACKN
+
+2025-11-28 13:07:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:07:51 - INFO - Encolado mensaje:TSC2MFCS011644EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:07:51 - INFO - Enviado:b'TSC2MFCS011644EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:07:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002844EEQQ0000ACKN
+
+2025-11-28 13:07:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:07:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011610EE99************************************************************************************************
+
+2025-11-28 13:07:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:07:52 - INFO - Encolado ACK:TSC2MFCS002810EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:07:52 - INFO - Enviado:b'TSC2MFCS002810EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:08:06 - INFO - Encolado mensaje:TSC2MFCS011645EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:08:06 - INFO - Enviado:b'TSC2MFCS011645EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:08:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002845EEQQ0000ACKN
+
+2025-11-28 13:08:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:08:21 - INFO - Encolado mensaje:TSC2MFCS011646EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:08:21 - INFO - Enviado:b'TSC2MFCS011646EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:08:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002846EEQQ0000ACKN
+
+2025-11-28 13:08:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:08:36 - INFO - Encolado mensaje:TSC2MFCS011647EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:08:36 - INFO - Enviado:b'TSC2MFCS011647EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:08:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002847EEQQ0000ACKN
+
+2025-11-28 13:08:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:08:51 - INFO - Encolado mensaje:TSC2MFCS011648EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:08:51 - INFO - Enviado:b'TSC2MFCS011648EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:08:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002848EEQQ0000ACKN
+
+2025-11-28 13:08:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:08:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011611EE99************************************************************************************************
+
+2025-11-28 13:08:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:08:52 - INFO - Encolado ACK:TSC2MFCS002811EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:08:52 - INFO - Enviado:b'TSC2MFCS002811EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:09:06 - INFO - Encolado mensaje:TSC2MFCS011649EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:09:06 - INFO - Enviado:b'TSC2MFCS011649EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:09:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002849EEQQ0000ACKN
+
+2025-11-28 13:09:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:09:21 - INFO - Encolado mensaje:TSC2MFCS011650EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:09:21 - INFO - Enviado:b'TSC2MFCS011650EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:09:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002850EEQQ0000ACKN
+
+2025-11-28 13:09:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:09:36 - INFO - Encolado mensaje:TSC2MFCS011651EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:09:36 - INFO - Enviado:b'TSC2MFCS011651EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:09:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002851EEQQ0000ACKN
+
+2025-11-28 13:09:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:09:51 - INFO - Encolado mensaje:TSC2MFCS011652EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:09:51 - INFO - Enviado:b'TSC2MFCS011652EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:09:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002852EEQQ0000ACKN
+
+2025-11-28 13:09:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:09:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011612EE99************************************************************************************************
+
+2025-11-28 13:09:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:09:52 - INFO - Encolado ACK:TSC2MFCS002812EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:09:52 - INFO - Enviado:b'TSC2MFCS002812EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:10:06 - INFO - Encolado mensaje:TSC2MFCS011653EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:10:06 - INFO - Enviado:b'TSC2MFCS011653EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:10:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002853EEQQ0000ACKN
+
+2025-11-28 13:10:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:10:21 - INFO - Encolado mensaje:TSC2MFCS011654EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:10:21 - INFO - Enviado:b'TSC2MFCS011654EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:10:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002854EEQQ0000ACKN
+
+2025-11-28 13:10:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:10:36 - INFO - Encolado mensaje:TSC2MFCS011655EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:10:36 - INFO - Enviado:b'TSC2MFCS011655EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:10:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002855EEQQ0000ACKN
+
+2025-11-28 13:10:36 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:10:51 - INFO - Encolado mensaje:TSC2MFCS011656EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:10:51 - INFO - Enviado:b'TSC2MFCS011656EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:10:51 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002856EEQQ0000ACKN
+
+2025-11-28 13:10:51 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:10:52 - INFO - Datos recibidos en puerto PLC1.in: MFCSTSC2011613EE99************************************************************************************************
+
+2025-11-28 13:10:52 - INFO - recibido tipo: 99 en socket PLC1.in
+2025-11-28 13:10:52 - INFO - Encolado ACK:TSC2MFCS002813EEQQ0000ACKN
+ en socket PLC1.in
+2025-11-28 13:10:52 - INFO - Enviado:b'TSC2MFCS002813EEQQ0000ACKN\r\n' en puerto PLC1.in
+
+2025-11-28 13:11:06 - INFO - Encolado mensaje:TSC2MFCS011657EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:11:06 - INFO - Enviado:b'TSC2MFCS011657EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:11:06 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002857EEQQ0000ACKN
+
+2025-11-28 13:11:06 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:11:21 - INFO - Encolado mensaje:TSC2MFCS011658EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:11:21 - INFO - Enviado:b'TSC2MFCS011658EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:11:21 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002858EEQQ0000ACKN
+
+2025-11-28 13:11:21 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:11:26 - INFO - Datos recibidos del formulario:
+2025-11-28 13:11:26 - INFO - Encolado mensaje:TSC2MFCS011659EE61PM1DI001******************2222222222******************00012345**03040006000400******************
+ en socket PLC1.out
+2025-11-28 13:11:26 - INFO - 127.0.0.1 - - [28/Nov/2025 13:11:26] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-11-28 13:11:26 - INFO - 127.0.0.1 - - [28/Nov/2025 13:11:26] "GET / HTTP/1.1" 200 -
+2025-11-28 13:11:26 - INFO - Enviado:b'TSC2MFCS011659EE61PM1DI001******************2222222222******************00012345**03040006000400******************\r\n' en puerto PLC1.out
+
+2025-11-28 13:11:26 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002859EEQQ0000ACKN
+
+2025-11-28 13:11:26 - INFO - recibido tipo: QQ en socket PLC1.out
+2025-11-28 13:11:36 - INFO - Encolado mensaje:TSC2MFCS011660EE99************************************************************************************************
+ en socket PLC1.out
+2025-11-28 13:11:36 - INFO - Enviado:b'TSC2MFCS011660EE99************************************************************************************************\r\n' en puerto PLC1.out
+
+2025-11-28 13:11:36 - INFO - Datos recibidos en puerto PLC1.out: MFCSTSC2002860EEQQ0000ACKN
+
+2025-11-28 13:11:36 - INFO - recibido tipo: QQ en socket PLC1.out

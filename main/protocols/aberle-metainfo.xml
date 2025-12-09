@@ -1,0 +1,531 @@
+<?xml version='1.0'?>
+
+<protocol>
+    <messageTypeDecoder class="com.inditex.wms.commoncom.impl.FieldMessageTypeDecoder" field="type"/>
+    <type name="String" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.String" character="*" left="false" remove="true"/>
+    <type name="StringLeftZero" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.String" character="0" left="true" remove="true"/>
+    <type name="Integer" class="com.inditex.wms.commoncom.impl.FillTypeMetaInfo" type="java.lang.Integer" character="0" left="true" remove="true"/>
+    <type name="TuType" class="com.inditex.wms.commoncom.aberle.TuTypeMetaInfo" />
+
+	<header>
+        <field name="sender" type="String" length="4" required="true" description="Short term for the sender"/>
+        <field name="receiver" type="String" length="4" required="true" description="Short term for the receiver"/>
+        <field name="length" type="Integer" length="4" required="true" description="Overall length of the the telegram"/>
+        <field name="sequencenumber" type="Integer" length="2" required="true" description="Sequence number"/>
+        <field name="repeatedflag" type="String" length="2" required="true" default="EE" options="EE|WW" description="Flag for repeated telegrams. EE sent for the first time, WW repeated telegram"/>
+        <field name="type" type="String" length="2" required="true" description="Address scheme identifier"/>
+    </header>
+	
+	<!-- GENERIC MESSAGES			-->
+
+	<!--  ACKN						-->
+	<message type="QQ" minBodies="1" maxBodies="1">
+		<field name="errorcode" type="Integer" length="4" description="List identifier"/>
+		<field name="ackn" type="String" length="4" required="true" options="ACKN" default="ACKN"  description="Reserved for future use"/>		
+	</message>
+	
+	<!--  ALIVE						-->
+	<message type="99" minBodies="1" maxBodies="1">
+		<field name="reserve" type="String" length="96" description="List identifier"/>
+	</message>
+	
+	
+	<!-- MESSAGES MFS - PLC  -->
+	
+	<!--  01 : Transport order  	-->
+	<message type="01" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" options="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>						
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	
+    </message>
+	
+	<!--  02 : Transport order 		-->
+	<message type="02" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	</message>
+
+	<!--  03 : Transport order  	-->
+	<message type="03" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	</message>
+
+	<!--  04 : Transport order  	-->
+	<message type="04" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	</message>
+
+	<!--  05 : Order without transport  	-->
+	<message type="05" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	</message>
+
+	<!--  06 : Revised transport order  	-->
+	<message type="06" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>	</message>
+
+	<!--  07 : Delete a transport order  	-->
+	<message type="07" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--  14 : Lamp telegram					-->
+	<message type="14" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="84" description="Reserved for future use"/>						
+	</message>
+
+	<!--  15 : Status request (groups)  		-->
+	<message type="15" minBodies="1" maxBodies="1">
+		<field name="reserve" type="String" length="96" description="Reserved for future use"/>					
+	</message>
+
+	<!--  16 : Status request (work stations)  	-->
+	<message type="16" minBodies="1" maxBodies="1">
+		<field name="reserve" type="String" length="96" description="Reserved for future use"/>					
+	</message>
+
+	<!--  17 : Lamp telegram					-->
+	<message type="17" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>		
+		<field name="status" type="String" length="2" options="00|01|02|03|04|05|10|11|20" description="Status of the lamp. 00 lamp off, 01 lamp on"/>
+		<field name="reserve2" type="String" length="48" description="Reserved for future use"/>						
+	</message>
+	
+	<!--  18 : Scanner statistic  				-->
+	<message type="18" minBodies="1" maxBodies="1">
+		<field name="reserve" type="String" length="46" description="Reserved for future use"/>		
+		<field name="status" type="String" length="2" options="00|01" description="Status of the scanner. 00 no reset, 01 reset"/>
+		<field name="reserve2" type="String" length="56" description="Reserved for future use"/>						
+	</message>
+
+	<!--   19 : Stopping/Continue Mode 	-->
+	<message type="19" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>
+		<field name="mode" type="String" length="2" options="00|01" description="00=Continue mode, 01=Stopping mode"/>
+		<field name="reserve2" type="String" length="48" description="Reserved for future use"/>
+	</message>
+
+    <!--  20 : Speed telegram                    -->
+    <message type="20" minBodies="1" maxBodies="1">
+        <field name="source" type="String" length="12" description="Name of the position of the source"/>
+        <field name="reserve" type="String" length="36" description="Reserved for future use"/>     
+        <field name="status" type="StringLeftZero" length="4" description="Speed percentage 0000-0100"/>
+        <field name="reserve2" type="String" length="44" description="Reserved for future use"/>                        
+    </message>
+
+	<!-- MENSAJES PLC - MFS  -->
+
+    <!--  64 : Solicitud de borrado                         -->
+    <message type="64" minBodies="1" maxBodies="1">
+        <field name="source" type="String" length="12" description="Name of the position of the source"/>
+        <field name="reserve" type="String" length="14" description="Reserved for future use"/>
+        <field name="tunumber" type="String" length="20" description="ID Contenedor"/>
+        <field name="reserve2" type="String" length="50" description="Reserved for future use"/>
+    </message>
+
+	<!--   61 : Position notification 			-->
+	<message type="61" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>		
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+
+		<!-- field name="contentcode" type="String" length="18" description="Codigo de barras y cantidad"/-->
+		<field name="logicaldestination" type="String" length="2" options="00|01|02" description="Destino logico"/>
+		<field name="reserve" type="String" length="16" description="Codigo de barras y cantidad"/>	
+	</message>
+
+	<!--   81 : Transport finished  			-->
+	<message type="81" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+
+	<!--  54 : Mechanism situation				-->
+	<message type="54" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>	
+		<field name="status" type="Integer" length="2" description="Status code"/>
+		<field name="reserve2" type="String" length="48" description="Reserved for future use"/>						
+	</message>
+
+	<!--   55 : Status message (response to message 15) 				-->
+	<message type="55" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>		
+		<field name="status" type="String" length="2" required="true" options="00|01|02|03|04|05" description="Status of the areas. 00 no error/automatic mode, 01 error/manual mode, 02 maintenance switch off"/>
+		<field name="reserve2" type="String" length="48" description="Reserved for future use"/>						
+	</message>
+	
+	<!--   56 : Status message (response to message 16)					-->
+	<message type="56" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>		
+		<field name="status" type="String" length="2" required="true" options="00|01|02|03|04|05|06|07|08|09|10" description="Status of the areas. 00 work station/aisle activated, 01 work station/aisle"/>
+		<field name="reserve2" type="String" length="48" description="Reserved for future use"/>						
+	</message>
+
+	<!--   57 : Balanced level info										-->
+	<message type="57" minBodies="1" maxBodies="1">
+        <field name="source1" type="String" length="12" description="Name of the position of the source1"/>
+        <field name="source2" type="String" length="12" description="Name of the position of the source2"/>
+        <field name="priority1" type="Integer" length="2" description="Prioridad 1"/>
+        <field name="reserve1" type="String" length="2" description="Separador"/>
+        <field name="priority2" type="Integer" length="2" description="Prioridad 2"/>
+        <field name="reserve2" type="String" length="66" description="Reserved for future use"/>
+	</message>
+
+	<!--  58 : Scanner message (response to message 18)				  	-->
+	<message type="58" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve" type="String" length="34" description="Reserved for future use"/>		
+		<field name="reads" type="Integer" length="12" description="Amount of reads of the scanner"/>
+		<field name="space" type="String" length="2" default="" description="Always empty"/>
+		<field name="noreads" type="Integer" length="12" description="Amount of NO reads of the scanner"/>				
+		<field name="reserve2" type="String" length="24" description="Reserved for future use"/>							
+	</message>
+	
+	<!--  59 : Lane Fillup Level				  	-->
+	<message type="59" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source of a transport"/>
+		<field name="destination" type="String" length="36" description="Name of the position of the destination of a transport"/>		
+		<field name="level" type="String" length="4" description="Percentage of fillup level. e.g. 0025 to state 25%"/>
+		<field name="reserve2" type="String" length="44" description="Reserved for future use"/>							
+	</message>
+
+	<!--  62 : Position occupied  			-->
+	<message type="62" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+	
+	<!--  63 : Position gets empty  		-->
+	<message type="63" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--   65 : Position notification 			-->
+	<message type="65" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="reserve1" type="String" length="14" description="Reserva"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="reserve2" type="String" length="2" description="Reserva"/>
+		<field name="contentcode" type="String" length="20" description="Codigo de barras y cantidad"/>
+		<field name="reserve3" type="String" length="2" description="Reserva"/>
+		<field name="orderreg" type="String" length="20" description="Codigo de barras del pedido"/>
+		<field name="reserve5" type="String" length="6" description="Reserva"/>
+	</message>
+
+	<!--   71 : Position notification 			-->
+	<message type="71" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+	
+	<!--   72 : Position notification 			-->
+	<message type="72" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--   73 : Position notification 			-->
+	<message type="73" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--   74 : Position notification 			-->
+	<message type="74" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--   82 : Transport finished  			-->
+	<message type="82" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+	
+	<!--   83 : Transport finished  			-->
+	<message type="83" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+	<!--   84 : Transport finished  			-->
+	<message type="84" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+	
+	<!--   92 : Failure			  	-->
+	<message type="92" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+	
+	<!--   93 : Failure			  	-->
+	<message type="93" minBodies="1" maxBodies="1">
+		<field name="source" type="String" length="12" description="Name of the position of the source"/>
+		<field name="destination" type="String" length="12" description="Name of the position of the destination"/>		
+		<field name="flagmanual" type="String" length="2" options="MM" description="MM is used if the telegram was created manually"/>
+		<field name="tunumber" type="String" length="20" description="ID of the transport unit"/>
+		<field name="status" type="String" length="2" option="00|01|10|11" description="Status flag"/>				
+		<field name="device" type="String" length="4" description="Device which perform the transport"/>		
+		<field name="terminator" type="String" length="2" options="EE" description="Flag to indicate the last transport in a sequence. EE: the last transport"/>	
+		<field name="weight" type="String" length="8" description="Weight measured in grams"/>
+		<field name="contour" type="String" length="2" description="Contour check"/>						
+		<field name="height" type="String" length="2" options="01|02|03|04|05|99" description="Height types"/>							
+		<field name="width" type="String" length="4" description="Width"/>	
+		<field name="length" type="String" length="4" description="Length"/>										
+		<field name="realheight" type="String" length="4" description="Altura real"/>
+		<field name="reserve" type="String" length="18" description="Reserved for future use"/>
+	</message>
+
+
+    <!--  09 : Transport order at the crane outfeed -->
+    <message type="09" minBodies="1" maxBodies="1">
+        <field name="source" type="String" length="12" description="Name of the position of the source"/>
+        <field name="destination" type="String" length="12" description="Name of the position of the destination"/>
+        <field name="reserve1" type="String" length="2" description="Reserved for future use"/>
+        <field name="tunumber" type="TuType" length="20" description="ID of the transport unit"/>
+        <field name="reserve" type="String" length="50" description="Reserved for future use"/>
+    </message>
+
+    <!--   69 : Request for a transport order at the crane outfeed -->
+    <message type="69" minBodies="1" maxBodies="1">
+        <field name="source" type="String" length="12" description="Name of the position of the source"/>
+        <field name="reserve" type="String" length="84" description="Reserved for future use"/>
+    </message>
+
+</protocol>
