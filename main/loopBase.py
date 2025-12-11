@@ -50,7 +50,7 @@ root = tree.getroot()
 conexiones = {}
 # creamos el diccionario con los datos
 for child in root:
-    if (child.tag in ['plc'] and child.attrib['protocolo'] in ['aberle']):
+    if (child.tag in ['plc'] ):
         logging.info (child.tag, child.attrib)
         for conx in child:
             conexiones[f'{child.attrib["name"]}.{conx.attrib["name"]}'] = {
@@ -64,7 +64,8 @@ for child in root:
                 "receiver" : child.attrib ["receiver"],
                 "cola" : queue.Queue(),
                 "contador" : 0,
-                "conectado" : False
+                "conectado" : False,
+                "version" : conx.attrib ["version"]
 
                 }
 
@@ -150,10 +151,10 @@ def formulario():
 
          <label for="tipo">Tipo:</label>
          <select name="tipo" id="tipo" required>
-           <option value="KAL">KAL</option>
            <option value="DR">DR</option>
            <option value="DR-P">DR-P</option>
            <option value="TR">TR</option>
+           <option value="KAL">KAL</option>
          </select><br><br>
 
          <div id="campo-origen">
@@ -176,25 +177,25 @@ def formulario():
         
         <div id="campo-largo">
           <label for="largo">Largo:</label>
-          <input type="text" id="largo" name="largo" placeholder="0">
+          <input type="text" id="largo" name="largo" placeholder="0">mm
         </div>
         <br>
         
         <div id="campo-alto">
           <label for="alto">Alto:</label>
-          <input type="text" id="alto" name="alto" placeholder="0">
+          <input type="text" id="alto" name="alto" placeholder="0">mm
         </div>
         <br>
         
         <div id="campo-ancho">
           <label for="ancho">Ancho:</label>
-          <input type="text" id="ancho" name="ancho" placeholder="0">
+          <input type="text" id="ancho" name="ancho" placeholder="0">mm
         </div>
         <br>
         
         <div id="campo-peso">
           <label for="peso">Peso:</label>
-          <input type="text" id="peso" name="peso" placeholder="0">
+          <input type="text" id="peso" name="peso" placeholder="0">gr
         </div>
         <br>
 

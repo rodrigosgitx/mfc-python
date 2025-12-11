@@ -1,11 +1,14 @@
-import logging
-logging.basicConfig(
-    format="{asctime} - {levelname} - {message}",
-    style="{",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO,
-    filename="logs/info.log",
-    encoding="utf-8",
-    filemode="a",
-)
-logging.info("Something went wrong!")
+datos = {'alto' : 1200}
+
+contorno = {
+    "01" : 1200,
+    "02" : 1600,
+    "99" : 9999,
+    }
+
+for a in contorno:
+        if datos['alto'] <= contorno[a]:
+            altura = a
+            break
+        
+print (altura)

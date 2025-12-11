@@ -2,8 +2,11 @@
 
 <sistema>
 	
-	<!-- ejemplo Aberle-->
+	<!-- ejemplo Aberle
+		Sólo kal en conexión out (1)
+		-->
 	
+	<!--
 	<plc 	name='PLC1' 
 			protocolo = 'aberle' 
 			sender = 'TSC2' 
@@ -13,14 +16,17 @@
 				port ='5001' 
 				kal = '0' 
 				kal.time = '15'
+				version = ''
 				/>
 				
 		<port 	name ='out' 
 				port ='5000' 
 				kal = '1' 
 				kal.time = '15'
+				version = ''
 				/>
 	</plc>
+	-->
 	<!-- ejemplo Durkopp-->
 	
 	<plc 	name='PLC001' 
@@ -30,14 +36,16 @@
 			
 		<port 	name ='high' 
 				port ='3501' 
-				kal = '1' 
-				kal.time = '15'
+				kal = '0' 
+				kal.time = '30'
+				version = '10'
 				/>
 				
 		<port 	name ='low' 
 				port ='3502' 
-				kal = '1' 
-				kal.time = '15'
+				kal = '0' 
+				kal.time = '30'
+				version = '10'
 				/>
 	</plc>
 
