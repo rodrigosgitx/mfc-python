@@ -52915,3 +52915,61 @@ TypeError: '<=' not supported between instances of 'str' and 'int'
  en socket PLC001.low
 2025-12-11 17:21:31 - INFO - Enviado:b'$$+TIBCS_AC+TS2025121117213140+TXHIS+RXWCS+VE10+TC00000418+TL0165+BQ0001+BL0084+SC0000+TIBCM_TS+TS2025121117213140+TXWCS+RXHIS+VE10+TC00000419+TL0100+BQ0001+BL0019\r\n' en puerto PLC001.low
 
+2026-09-08 17:03:31 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:03:31 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000002958A810EC0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000002958A7C5950>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:03:46 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:03:46 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001EA37DC9D10>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001EA37DC9E50>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:03:46 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2026-09-08 17:04:59 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:04:59 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001C2C0C94EC0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001C2C0C616D0>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:04:59 - INFO - conexion:PLC001.high 3501 - creando thread
+2026-09-08 17:04:59 - INFO - conexion:PLC001.low 3502 - creando thread
+2026-09-08 17:04:59 - INFO - Escuchando en 0.0.0.0:3501...
+2026-09-08 17:04:59 - INFO - Escuchando en 0.0.0.0:3502...
+2026-09-08 17:05:04 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2026-09-08 17:05:04 - INFO - HTTP Request: GET http://localhost:50001/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-09-08 17:05:04 - INFO - HTTP Request: HEAD http://localhost:50001/ "HTTP/1.1 200 OK"
+2026-09-08 17:05:05 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2026-09-08 17:07:25 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:07:25 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001D80EEC4EC0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000001D80EE89810>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:07:36 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:07:36 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000002254A455400>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x000002254A4396D0>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:07:43 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2026-09-08 17:09:44 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:09:44 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x0000024067724EC0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x00000240676F16D0>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:09:44 - INFO - conexion:PLC001.high 3501 - creando thread
+2026-09-08 17:09:44 - INFO - conexion:PLC001.low 3502 - creando thread
+2026-09-08 17:09:44 - INFO - Escuchando en 0.0.0.0:3501...
+2026-09-08 17:09:44 - INFO - Escuchando en 0.0.0.0:3502...
+2026-09-08 17:09:49 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2026-09-08 17:09:49 - INFO - HTTP Request: GET http://localhost:50001/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-09-08 17:09:49 - INFO - HTTP Request: HEAD http://localhost:50001/ "HTTP/1.1 200 OK"
+2026-09-08 17:09:49 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2026-09-08 17:10:33 - INFO - Encolado mensaje:$$+TICTS_DR+TS2026090817103351+TXHIS+RXWCS+VE10+TC00000000+TL0192+BQ0001+BL0111+MS000000+UI00000+RV****+TDBIT+SD                    +SR1+CA0000000000+SC0+QU0000+SQ0000+INW01H01              
+ en socket PLC001.high
+2026-09-08 17:12:57 - INFO - Arrancamos el emulador
+2026-09-08 17:12:57 - INFO - plc
+2026-09-08 17:12:57 - INFO - {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x0000025C762D63C0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x0000025C762B1F90>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:12:57 - INFO - conexion:PLC001.high 3501 - creando thread
+2026-09-08 17:12:57 - INFO - conexion:PLC001.low 3502 - creando thread
+2026-09-08 17:12:57 - INFO - Escuchando en 0.0.0.0:3502...
+2026-09-08 17:12:57 - INFO - Escuchando en 0.0.0.0:3501...
+2026-09-08 17:12:57 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50001
+ * Running on http://192.168.31.212:50001
+2026-09-08 17:12:57 - INFO - [33mPress CTRL+C to quit[0m
+2026-09-08 17:13:15 - INFO - 127.0.0.1 - - [08/Sep/2026 17:13:15] "GET / HTTP/1.1" 200 -
+2026-09-08 17:13:15 - INFO - 127.0.0.1 - - [08/Sep/2026 17:13:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-08 17:16:20 - INFO - Arrancamos el emulador con Gradio
+2026-09-08 17:16:20 - INFO - Conexiones cargadas: {'PLC001.high': {'id_plc': 'PLC001', 'id_puerto': 'high', 'protocolo': 'durkopp', 'puerto': 3501, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x0000017E28424EC0>, 'contador': 0, 'conectado': False, 'version': '10'}, 'PLC001.low': {'id_plc': 'PLC001', 'id_puerto': 'low', 'protocolo': 'durkopp', 'puerto': 3502, 'kal': False, 'kal.time': 30, 'sender': 'HIS', 'receiver': 'WCS', 'cola': <queue.Queue object at 0x0000017E283F16D0>, 'contador': 0, 'conectado': False, 'version': '10'}}
+2026-09-08 17:16:20 - INFO - conexion:PLC001.high 3501 - creando thread
+2026-09-08 17:16:20 - INFO - conexion:PLC001.low 3502 - creando thread
+2026-09-08 17:16:20 - INFO - Escuchando en 0.0.0.0:3502...
+2026-09-08 17:16:20 - INFO - Escuchando en 0.0.0.0:3501...
+2026-09-08 17:16:33 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2026-09-08 17:16:33 - INFO - HTTP Request: GET http://localhost:50001/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-09-08 17:16:33 - INFO - HTTP Request: HEAD http://localhost:50001/ "HTTP/1.1 200 OK"
+2026-09-08 17:16:33 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2026-09-09 10:14:52 - INFO - Encolado mensaje:$$+TICTS_DR+TS2026090910145299+TXHIS+RXWCS+VE10+TC00000000+TL0193+BQ0001+BL0112+MS000011+UI00000+RV****+TDBIT+SD11                  +SR1+CA0000000000+SC10+QU0000+SQ0000+IN********************
+ en socket PLC001.high
