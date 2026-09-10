@@ -22,7 +22,7 @@ def cabecera (conexion, mensaje):
     serie = conexion ['contador']
     sender = conexion ['sender']
     receiver = conexion ['receiver']
-    if mensaje["tipo"] != "PONG":
+    if mensaje["tipo"] != "PONG" and mensaje["tipo"] != "PING":
         cab = f'{sender};{receiver};{str(serie)};{mensaje["tipo"]};{mensaje["cuerpo"]}{terminator}'
     else:
         cab = f'{sender};{receiver};{str(serie)};{mensaje["tipo"]}{terminator}'
@@ -53,8 +53,7 @@ def interpreta(conexion, mensaje):
     tipo = mensaje.strip().split(";")[3]
     logging.info (f"recibido mensaje: {mensaje} en socket {conexion['id_plc']}.{conexion['id_puerto']}")
     if tipo == 'PING':
-        a = {"tipo" : "KAL"}
-        crea (conexion, a)
+        ack (conexion)
         
     
 def crea(conexion, datos):
@@ -62,6 +61,8 @@ def crea(conexion, datos):
     mensaje={}    
         
     if datos["tipo"] == "KAL":
+        mensaje['tipo'] = 'PING'
+    if datos["tipo"] == "PONG":
         mensaje['tipo'] = 'PONG'
     if datos["tipo"] == "DR":
         mensaje['cuerpo'] = lrepNdir(datos)
@@ -93,5 +94,10 @@ def kal (conexion):
         if conexion['conectado'] == True:
             crea (conexion, a)
         time.sleep (int(conexion["kal.time"]))
-    
+        
+        
+def ack(conexion):
+    ''' Recibe un PING y añade un PONG a la cola correspondiente'''
+    a = {"tipo" : "PONG"}
+    crea (conexion, a)
     

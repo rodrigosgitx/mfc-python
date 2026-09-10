@@ -6,7 +6,7 @@
 		Sólo kal en conexión out (1)
 		-->
 	
-	<!--
+	
 	<plc 	name='PLC1' 
 			protocolo = 'aberle' 
 			sender = 'TSC2' 
@@ -28,10 +28,10 @@
 				isoOnTCP = '0'
 				/>
 	</plc>
-	-->
+	
 	<!-- ejemplo Durkopp-->
 	
-	<!--
+	
 	<plc 	name='PLC001' 
 			protocolo = 'durkopp' 
 			sender = 'HIS' 
@@ -53,7 +53,7 @@
 				isoOnTCP = '0'
 				/>
 	</plc>
-	-->
+	
 
 	<!-- ejemplo Commander-->
 
@@ -64,7 +64,7 @@
 			
 		<port 	name ='port' 
 				port ='2101' 
-				kal = '0' 
+				kal = '1' 
 				kal.time = '9'
 				isoOnTCP = '1'
 				version = ''

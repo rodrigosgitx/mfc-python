@@ -29,10 +29,10 @@ def parsear (texto, longitud):
 #funcion cabecera
 
 def cabecera (conexion, mensaje):
-    mida = 12 + 2 + len(mensaje)+2
     serie = conexion ['contador']
     sender = conexion ['sender']
     receiver = conexion ['receiver']
+    mida = len(sender) + len(receiver) + 4 + 2 + len(mensaje["tipo"]) + len(mensaje["cuerpo"]) + len(terminator)
     cab = f'{sender}{receiver}{str(mida).zfill(4)}{str(serie).zfill(2)}{mensaje["tipo"]}{mensaje["cuerpo"]}{terminator}'
     return (cab)    
 
