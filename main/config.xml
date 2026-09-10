@@ -17,6 +17,7 @@
 				kal = '0' 
 				kal.time = '15'
 				version = ''
+				isoOnTCP = '0'
 				/>
 				
 		<port 	name ='out' 
@@ -24,11 +25,13 @@
 				kal = '1' 
 				kal.time = '15'
 				version = ''
+				isoOnTCP = '0'
 				/>
 	</plc>
 	-->
 	<!-- ejemplo Durkopp-->
 	
+	<!--
 	<plc 	name='PLC001' 
 			protocolo = 'durkopp' 
 			sender = 'HIS' 
@@ -39,6 +42,7 @@
 				kal = '0' 
 				kal.time = '30'
 				version = '10'
+				isoOnTCP = '0'
 				/>
 				
 		<port 	name ='low' 
@@ -46,6 +50,24 @@
 				kal = '0' 
 				kal.time = '30'
 				version = '10'
+				isoOnTCP = '0'
+				/>
+	</plc>
+	-->
+
+	<!-- ejemplo Commander-->
+
+	<plc 	name='PLCF01a' 
+			protocolo = 'commander' 
+			sender = 'F01a' 
+			receiver = 'MFCS'>
+			
+		<port 	name ='port' 
+				port ='2101' 
+				kal = '0' 
+				kal.time = '9'
+				isoOnTCP = '1'
+				version = ''
 				/>
 	</plc>
 

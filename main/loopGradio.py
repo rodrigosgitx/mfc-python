@@ -11,16 +11,18 @@ sys.path.insert(0, "libs")
 
 from protocols import aberle
 from protocols import durkopp
+from protocols import commander
 
-
+import logging
 logging.basicConfig(
+    level=logging.INFO,
     format="{asctime} - {levelname} - {message}",
     style="{",
     datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO,
-    filename="logs/info.log",
-    encoding="utf-8",
-    filemode="a",
+    handlers=[
+        logging.FileHandler("logs/info.log", mode="a", encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
 )
 
 logging.info("Arrancamos el emulador con Gradio")
@@ -38,6 +40,12 @@ protocolos = {
         "kal": durkopp.kal,
         "ack": durkopp.ack,
     },
+    
+    "commander": {
+        "interpreta": commander.interpreta,
+        "crea": commander.crea,
+        "kal": commander.kal,
+    }
 }
 
 

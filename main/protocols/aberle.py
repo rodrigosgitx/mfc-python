@@ -33,7 +33,7 @@ def cabecera (conexion, mensaje):
     serie = conexion ['contador']
     sender = conexion ['sender']
     receiver = conexion ['receiver']
-    cab = f'{sender}{receiver}{str(mida).zfill(4)}{str(serie).zfill(2)}{mensaje}{terminator}'
+    cab = f'{sender}{receiver}{str(mida).zfill(4)}{str(serie).zfill(2)}{mensaje["tipo"]}{mensaje["cuerpo"]}{terminator}'
     return (cab)    
 
 
@@ -69,7 +69,6 @@ def ee61(datos, root):
                     n=int(net.attrib["length"])
                     for a in range(n): mensaje = mensaje + '*'
     
-    mensaje = "EE61" + mensaje
     return (mensaje)
 
 def ee61p(datos, root):
@@ -117,7 +116,6 @@ def ee61p(datos, root):
                     n=int(net.attrib["length"])
                     for a in range(n): mensaje = mensaje + '*'
                     
-    mensaje = "EE61" + mensaje
     return (mensaje)
 
 def ee81(datos,root):
@@ -153,7 +151,6 @@ def ee81(datos,root):
                     n=int(net.attrib["length"])
                     for a in range(n): mensaje = mensaje + '*'
     
-    mensaje = "EE81" + mensaje
     return (mensaje)
     
 
@@ -171,7 +168,7 @@ def interpreta(conexion, mensaje):
     #Si no es un ack, enviamos ack
     if tipo != 'QQ':
         serie = mensaje[12:14]
-        ack(conexion,serie)    
+        ack(conexion,serie)
     
     
 def crea(conexion, datos):
@@ -180,27 +177,31 @@ def crea(conexion, datos):
     # Parsear metainfo
     tree = ET.parse('protocols/aberle-metainfo.xml')
     root = tree.getroot()
-
+    mensaje={}
   
     
     if datos["tipo"] == "KAL":
-        mensaje = "EE99************************************************************************************************"
+        mensaje['cuerpo'] = "************************************************************************************************"
+        mensaje['tipo'] = 'EE99'
     if datos["tipo"] == "DR":
-        mensaje = ee61(datos,root)
+        mensaje['cuerpo'] = ee61(datos,root)
+        mensaje['tipo'] = 'EE61'
     if datos["tipo"] == "DR-P":
         mensaje = ee61p(datos,root)
+        mensaje['tipo'] = 'EE61'
     if datos["tipo"] == "TR":
-        mensaje = ee81(datos,root)
+        mensaje['cuerpo'] = ee81(datos,root)
+        mensaje['tipo'] = 'EE81'
     if datos["tipo"] == "MANUAL":
         mensaje = datos['telegrama']
         
-    mensaje = cabecera (conexion,mensaje)
+    telegrama = cabecera (conexion,mensaje)
     
     conexion['contador']+= 1
     if conexion['contador'] == 100: conexion['contador'] =1
     
-    conexion["cola"].put(mensaje.encode("utf-8"), block=True)    
-    logging.info(f'Encolado mensaje:{mensaje} en socket {conexion["id_plc"]}.{conexion["id_puerto"]}')
+    conexion["cola"].put(telegrama.encode("utf-8"), block=True)    
+    logging.info(f'Encolado mensaje:{telegrama} en socket {conexion["id_plc"]}.{conexion["id_puerto"]}')
     
 
 def ack(conexion, serie):

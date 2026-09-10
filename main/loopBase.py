@@ -10,18 +10,20 @@ import xml.etree.ElementTree as ET
 
 from protocols import aberle
 from protocols import durkopp
+from protocols import commander
 
 # Creamos el logger
 
 import logging
 logging.basicConfig(
+    level=logging.INFO,
     format="{asctime} - {levelname} - {message}",
     style="{",
     datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.INFO,
-    filename="logs/info.log",
-    encoding="utf-8",
-    filemode="a",
+    handlers=[
+        logging.FileHandler("logs/info.log", mode="a", encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
 )
 
 logging.info("Arrancamos el emulador")
@@ -40,6 +42,11 @@ protocolos = {
          "crea" : durkopp.crea,
          "kal" : durkopp.kal,
          "ack" : durkopp.ack
+         },
+    "commander" :
+        {"interpreta" : commander.interpreta,
+         "crea" : commander.crea,
+         "kal" : commander.kal
          }
     }
 
@@ -65,12 +72,35 @@ for child in root:
                 "cola" : queue.Queue(),
                 "contador" : 0,
                 "conectado" : False,
-                "version" : conx.attrib ["version"]
+                "version" : conx.attrib ["version"],
+                "isoOnTCP" : bool(int(conx.attrib.get("isoOnTCP", "0")))
 
                 }
 
 logging.info(conexiones)
 
+
+
+def extrae_mensaje_iso_on_tcp(buffer):
+  '''Extrae un payload TPKT/COTP completo del buffer si está disponible.'''
+  if len(buffer) < 4 or buffer[:2] != b"\x03\x00":
+    return None
+
+  longitud = int.from_bytes(buffer[2:4], byteorder="big")
+  if longitud < 7:
+    raise ValueError(f"Longitud TPKT inválida: {longitud}")
+  if len(buffer) < longitud:
+    return None
+  if buffer[4:7] != b"\x02\xf0\x80":
+    raise ValueError("Cabecera COTP no soportada")
+
+  return buffer[7:longitud], buffer[longitud:]
+
+
+def empaqueta_iso_on_tcp(mensaje):
+  '''Encapsula el payload en una trama TPKT/COTP de datos.'''
+  longitud = len(mensaje) + 7
+  return b"\x03\x00" + longitud.to_bytes(2, byteorder="big") + b"\x02\xf0\x80" + mensaje
 
 
 def conexion_puerto(datos):
@@ -85,11 +115,15 @@ def conexion_puerto(datos):
             with conn:
                 logging.info(f'Conexión establecida desde {addr} en puerto {datos["id_plc"]}.{datos["id_puerto"]}\n')
                 datos['conectado'] = True
+                buffer_iso_on_tcp = b""
+                usa_iso_on_tcp = datos["isoOnTCP"]
 
                 # Si la cola no está vacía, recogemos y enviamos
                 while True:
                     if not datos["cola"].empty():
                         response = datos["cola"].get()
+                        if usa_iso_on_tcp:
+                          response = empaqueta_iso_on_tcp(response)
                         conn.sendall(response)  # Enviar respuesta al cliente
                         logging.info(f'Enviado:{response} en puerto {datos["id_plc"]}.{datos["id_puerto"]}\n')
 
@@ -101,10 +135,23 @@ def conexion_puerto(datos):
                     except socket.timeout:
                         data = b""
                     if data:
-                        logging.info(f'Datos recibidos en puerto {datos["id_plc"]}.{datos["id_puerto"]}: {data.decode("utf-8")}')
+                      if usa_iso_on_tcp:
+                        buffer_iso_on_tcp += data
+                        mensaje_iso_on_tcp = extrae_mensaje_iso_on_tcp(buffer_iso_on_tcp)
 
-                        #enviamos los datos recibidos al intérprete correspondiente
-                        protocolos[datos["protocolo"]]["interpreta"](datos,data.decode("utf-8"))
+                        if mensaje_iso_on_tcp:
+                          payload, buffer_iso_on_tcp = mensaje_iso_on_tcp
+                          logging.info(
+                            f'Datos recibidos en puerto {datos["id_plc"]}.{datos["id_puerto"]}: '
+                            f'{payload.decode("ascii")}'
+                          )
+                          protocolos[datos["protocolo"]]["interpreta"](datos, payload.decode("ascii"))
+                      else:
+                        logging.info(
+                          f'Datos recibidos en puerto {datos["id_plc"]}.{datos["id_puerto"]}: '
+                          f'{data.decode("utf-8")}'
+                        )
+                        protocolos[datos["protocolo"]]["interpreta"](datos, data.decode("utf-8"))
 
 # Frontend web
 
