@@ -193,7 +193,8 @@ def crea(conexion, datos):
         mensaje['cuerpo'] = ee81(datos,root)
         mensaje['tipo'] = 'EE81'
     if datos["tipo"] == "MANUAL":
-        mensaje = datos['telegrama']
+        mensaje["cuerpo"] = datos['telegrama']
+        mensaje['tipo'] = datos['tipomensaje']
         
     telegrama = cabecera (conexion,mensaje)
     

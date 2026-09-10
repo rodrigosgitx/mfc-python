@@ -70,6 +70,7 @@ def cargar_conexiones():
                 "contador": 0,
                 "conectado": False,
                 "version": puerto.attrib["version"],
+                "isoOnTCP": bool(int(puerto.attrib.get("isoOnTCP", "0"))),
             }
 
     logging.info("Conexiones cargadas: %s", conexiones)
@@ -77,6 +78,28 @@ def cargar_conexiones():
 
 
 conexiones = cargar_conexiones()
+
+
+def extrae_mensaje_iso_on_tcp(buffer):
+    '''Extrae un payload TPKT/COTP completo del buffer si está disponible.'''
+    if len(buffer) < 4 or buffer[:2] != b"\x03\x00":
+        return None
+
+    longitud = int.from_bytes(buffer[2:4], byteorder="big")
+    if longitud < 7:
+        raise ValueError(f"Longitud TPKT inválida: {longitud}")
+    if len(buffer) < longitud:
+        return None
+    if buffer[4:7] != b"\x02\xf0\x80":
+        raise ValueError("Cabecera COTP no soportada")
+
+    return buffer[7:longitud], buffer[longitud:]
+
+
+def empaqueta_iso_on_tcp(mensaje):
+    '''Encapsula el payload en una trama TPKT/COTP de datos.'''
+    longitud = len(mensaje) + 7
+    return b"\x03\x00" + longitud.to_bytes(2, byteorder="big") + b"\x02\xf0\x80" + mensaje
 
 
 def conexion_puerto(datos):
@@ -98,10 +121,14 @@ def conexion_puerto(datos):
                 )
                 datos["conectado"] = True
                 conn.settimeout(0.1)
+                buffer_iso_on_tcp = b""
+                usa_iso_on_tcp = datos["isoOnTCP"]
 
                 while True:
                     if not datos["cola"].empty():
                         response = datos["cola"].get()
+                        if usa_iso_on_tcp:
+                            response = empaqueta_iso_on_tcp(response)
                         conn.sendall(response)
                         logging.info(
                             "Enviado: %s en puerto %s.%s",
@@ -120,15 +147,33 @@ def conexion_puerto(datos):
                     if not data:
                         break
 
-                    logging.info(
-                        "Datos recibidos en puerto %s.%s: %s",
-                        datos["id_plc"],
-                        datos["id_puerto"],
-                        data.decode("utf-8"),
-                    )
-                    protocolos[datos["protocolo"]]["interpreta"](
-                        datos, data.decode("utf-8")
-                    )
+                    if usa_iso_on_tcp:
+                        buffer_iso_on_tcp += data
+                        mensaje_iso_on_tcp = extrae_mensaje_iso_on_tcp(buffer_iso_on_tcp)
+
+                        if mensaje_iso_on_tcp:
+                            payload, buffer_iso_on_tcp = mensaje_iso_on_tcp
+                            mensaje = payload.decode("ascii")
+                            logging.info(
+                                "Datos recibidos en puerto %s.%s: %s",
+                                datos["id_plc"],
+                                datos["id_puerto"],
+                                mensaje,
+                            )
+                            protocolos[datos["protocolo"]]["interpreta"](
+                                datos, mensaje
+                            )
+                    else:
+                        mensaje = data.decode("utf-8")
+                        logging.info(
+                            "Datos recibidos en puerto %s.%s: %s",
+                            datos["id_plc"],
+                            datos["id_puerto"],
+                            mensaje,
+                        )
+                        protocolos[datos["protocolo"]]["interpreta"](
+                            datos, mensaje
+                        )
 
                 datos["conectado"] = False
                 logging.info(
@@ -164,9 +209,11 @@ def crear_mensaje(conexion_id, tipo, origen, destino, matricula, largo, alto, an
     return f"Mensaje {tipo} encolado para {conexion_id}."
 
 
-def enviar_manual(conexion_id, telegrama):
+def enviar_manual(conexion_id, tipomensaje, telegrama):
     if not conexion_id:
         return "Selecciona una conexión."
+    if not tipomensaje:
+        return "Introduce el tipo de mensaje."
     if not telegrama:
         return "Introduce un mensaje."
 
@@ -174,7 +221,11 @@ def enviar_manual(conexion_id, telegrama):
         conexion = conexiones[conexion_id]
         protocolos[conexion["protocolo"]]["crea"](
             conexion,
-            {"tipo": "MANUAL", "telegrama": telegrama},
+            {
+                "tipo": "MANUAL",
+                "tipomensaje": tipomensaje,
+                "telegrama": telegrama,
+            },
         )
     except (KeyError, TypeError, ValueError) as exc:
         logging.exception("No se pudo encolar el mensaje manual")
@@ -268,6 +319,7 @@ def construir_interfaz():
             label="Conexión",
             allow_custom_value=False,
         )
+        tipomensaje = gr.Textbox(label="Tipo mensaje")
         telegrama = gr.Textbox(
             label="Mensaje sin cabecera",
             lines=8,
@@ -277,7 +329,7 @@ def construir_interfaz():
         resultado_manual = gr.Textbox(label="Resultado", interactive=False)
         enviar_manual_button.click(
             enviar_manual,
-            inputs=[conexion_manual, telegrama],
+            inputs=[conexion_manual, tipomensaje, telegrama],
             outputs=resultado_manual,
         )
 

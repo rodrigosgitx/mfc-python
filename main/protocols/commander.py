@@ -73,7 +73,8 @@ def crea(conexion, datos):
         mensaje['cuerpo'] = lrep(datos)
         mensaje['tipo'] = 'LREP'
     if datos["tipo"] == "MANUAL":
-        mensaje = datos['telegrama']
+        mensaje["cuerpo"] = datos['telegrama']
+        mensaje['tipo'] = datos['tipomensaje']
         
     telegrama = cabecera (conexion,mensaje)
     

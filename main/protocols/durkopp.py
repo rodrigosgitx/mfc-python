@@ -127,7 +127,8 @@ def crea(conexion, datos):
         mensaje["cuerpo"] = ctstr(datos,root)
         mensaje["tipo"] = "CTS_TR"
     if datos["tipo"] == "MANUAL":
-        mensaje = datos['telegrama']
+        mensaje["cuerpo"] = datos['telegrama']
+        mensaje['tipo'] = datos['tipomensaje']
     if datos["tipo"] == "ACK":
         mensaje['tipo'] = 'BCS_AC'
         mensaje['cuerpo'] = datos['telegrama']
