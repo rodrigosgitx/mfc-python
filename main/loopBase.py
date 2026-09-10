@@ -348,6 +348,10 @@ def formulario():
          </select>
          <br><br>
 
+         <label for="tipomensaje">Tipo mensaje:</label><br>
+         <input type="text" id="tipomensaje" name="tipomensaje" required>
+         <br><br>
+
          <label for="mensaje">Mensaje:</label><br>
          <textarea id="telegrama" name="telegrama" rows="4" cols="40" required></textarea>
          <br><br>
