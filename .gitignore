@@ -1,0 +1,3 @@
+main/logs/info.log
+__pycache__/
+*.py[cod]
