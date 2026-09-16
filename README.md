@@ -11,7 +11,7 @@ DR - > petición de destino por parte del plc
 DR con peso y medidas -> petición de destino por parte del plc informado de peso y medidas
 TR -> Destino alcanzado
 KAL -> keep alive, para pruebas.
-Ahora mismo sólo funciona con Aberle y dft, hay una rama con commander empezado, pero aún no hay nada hecho.
+Ahora mismo sólo funciona con Aberle, Commander y dft.
 
 ## Que NO hace
 No comprueba la gramática de los mensajes, no comprueba si llegan o no keepalives, sólo manda y recibe mensajería, no utiliza la biblioteca de ITX.
